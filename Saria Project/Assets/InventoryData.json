@@ -1,0 +1,69 @@
+{
+    "itemReferences": [
+        {
+            "amount": 1,
+            "id": 2,
+            "attributes": [
+                {
+                    "name": 0,
+                    "value": 25,
+                    "isOpen": true,
+                    "isBool": false
+                }
+            ]
+        }
+    ],
+    "equipAreas": [
+        {
+            "slotsData": [
+                {
+                    "hasItem": false,
+                    "indexOfItem": 0
+                },
+                {
+                    "hasItem": false,
+                    "indexOfItem": 0
+                },
+                {
+                    "hasItem": false,
+                    "indexOfItem": 0
+                }
+            ],
+            "indexOfSelectedSlot": 0
+        },
+        {
+            "slotsData": [
+                {
+                    "hasItem": false,
+                    "indexOfItem": 0
+                },
+                {
+                    "hasItem": false,
+                    "indexOfItem": 0
+                },
+                {
+                    "hasItem": false,
+                    "indexOfItem": 0
+                }
+            ],
+            "indexOfSelectedSlot": 0
+        },
+        {
+            "slotsData": [
+                {
+                    "hasItem": true,
+                    "indexOfItem": 0
+                },
+                {
+                    "hasItem": false,
+                    "indexOfItem": 0
+                },
+                {
+                    "hasItem": false,
+                    "indexOfItem": 0
+                }
+            ],
+            "indexOfSelectedSlot": 0
+        }
+    ]
+}
