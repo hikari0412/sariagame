@@ -37586,12 +37586,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5070146441459286819}
-  m_RootOrder: 2
+  m_Father: {fileID: 5070146441885350446}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: -51.76}
+  m_AnchoredPosition: {x: 130, y: -363.97003}
   m_SizeDelta: {x: 250, y: 54.19}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &5070146440741191886
@@ -83121,13 +83121,12 @@ RectTransform:
   m_Children:
   - {fileID: 5070146440517088861}
   - {fileID: 5070146439824301012}
-  - {fileID: 5070146440741191881}
   m_Father: {fileID: 5070146441885350446}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -312.21}
+  m_AnchoredPosition: {x: -270, y: -312.21}
   m_SizeDelta: {x: 250, y: 105.95}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &5070146441459286828
@@ -103333,6 +103332,7 @@ RectTransform:
   - {fileID: 5070146441459286819}
   - {fileID: 5070146440418294644}
   - {fileID: 5070146440668612700}
+  - {fileID: 5070146440741191881}
   m_Father: {fileID: 5070146440119129558}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -103363,7 +103363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 0
   currentItem: {fileID: 0}
   slotPrefab: {fileID: 11458922, guid: 7a4e3d0d8be5f4841bebbb2cd8f9198d, type: 3}
   contentWindow: {fileID: 5070146440045671109}
