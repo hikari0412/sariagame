@@ -406,7 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 0
+  selectedToolbar: 2
   item: {fileID: 0}
   isValid: 1
   isChecked: 0
