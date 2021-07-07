@@ -4245,7 +4245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e83ae16d2f9564fb0c2d80efb971ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentItemModel: {fileID: 1887878410}
+  currentItemModel: {fileID: 0}
   currentItemRotateSpeed: 45
   displays:
   - itemId: 14
@@ -7204,7 +7204,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f952a89f7b7707549a061f1bdc705778,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f952a89f7b7707549a061f1bdc705778, type: 3}
@@ -8837,7 +8837,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 01b04d72a57eabb48bbeacf6878e7ea6,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b04d72a57eabb48bbeacf6878e7ea6, type: 3}
