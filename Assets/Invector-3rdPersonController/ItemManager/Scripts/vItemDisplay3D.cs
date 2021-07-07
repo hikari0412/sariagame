@@ -12,6 +12,7 @@ public class vItemDisplay3D : MonoBehaviour
         public GameObject itemModel;
     }
     public GameObject currentItemModel;
+    public float currentItemRotateSpeed = 45.0f;
     public List<vDisplay> displays;
     public void Display(vItemSlot slot)
     {
@@ -32,5 +33,13 @@ public class vItemDisplay3D : MonoBehaviour
     public void Display(vItem item)
     {
         if(item)Display(item.id);
+    }
+
+    private void Update()
+    {
+        if (currentItemModel)
+        {
+            currentItemModel.transform.Rotate(Vector3.up, currentItemRotateSpeed * Time.unscaledDeltaTime);
+        }
     }
 }
