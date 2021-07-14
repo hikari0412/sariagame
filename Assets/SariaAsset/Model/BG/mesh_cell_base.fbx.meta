@@ -9,6 +9,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: mat_cellroom
     second: {fileID: 2100000, guid: 53cd066d7c09c32438c0498da6c36ae6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tex_cell_inner
+    second: {fileID: 2100000, guid: 49ca8c20fa4c7e340ae3b40f1e7b647a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tex_cellroom
+    second: {fileID: 2100000, guid: 53cd066d7c09c32438c0498da6c36ae6, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

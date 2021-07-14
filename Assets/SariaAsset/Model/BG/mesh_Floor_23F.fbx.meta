@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: mat_floor23F
     second: {fileID: 2100000, guid: 7fded67c26f41384496f1673e596bdc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tex_floor23F
+    second: {fileID: 2100000, guid: 7fded67c26f41384496f1673e596bdc3, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -41,7 +46,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
