@@ -92,7 +92,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 4fad168cbc6be8e468fd9c5ef1b69a66, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapForMatCap:
@@ -194,7 +194,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HighColor_Power: 0.265
+    - _HighColor_Power: 0.399
     - _Inverse_Clipping: 0
     - _Inverse_MatcapMask: 0
     - _Inverse_Z_Axis_BLD: 1
@@ -217,9 +217,9 @@ Material:
     - _Is_LightColor_Outline: 1
     - _Is_LightColor_RimLight: 1
     - _Is_NormalMapForMatCap: 0
-    - _Is_NormalMapToBase: 0
+    - _Is_NormalMapToBase: 1
     - _Is_NormalMapToHighColor: 0
-    - _Is_NormalMapToRimLight: 0
+    - _Is_NormalMapToRimLight: 1
     - _Is_Ortho: 0
     - _Is_OutlineTex: 0
     - _Is_PingPong_Base: 0
@@ -237,7 +237,7 @@ Material:
     - _Offset_X_Axis_BLD: -0.05
     - _Offset_Y_Axis_BLD: 0.09
     - _Offset_Z: 0
-    - _Outline_Width: 0
+    - _Outline_Width: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimLight: 1
@@ -300,9 +300,9 @@ Material:
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emissive_Color: {r: 0, g: 0, b: 0, a: 1}
-    - _HighColor: {r: 0.2735849, g: 0.17937878, b: 0.17937878, a: 1}
+    - _HighColor: {r: 0.2735849, g: 0.1974457, b: 0.1974457, a: 1}
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Outline_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Outline_Color: {r: 0, g: 0, b: 0, a: 1}
     - _RimLightColor: {r: 0.2264151, g: 0.088232875, b: 0.07155571, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _ViewShift: {r: 0, g: 0, b: 0, a: 1}
