@@ -17,7 +17,7 @@ MonoBehaviour:
 
     Recoil: Low'
   type: 6
-  icon: {fileID: 21300000, guid: 40e348f6451ddf7438089a59a033e57f, type: 3}
+  icon: {fileID: 21300000, guid: 3c6278688dcbbb241b18cce4d8393c2d, type: 3}
   stackable: 0
   maxStack: 1
   amount: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   id: 13
   description: Melee Weapon
   type: 1
-  icon: {fileID: 21300000, guid: b2158c09d5bc7284989f53a47f7638e3, type: 3}
+  icon: {fileID: 21300000, guid: 79978b85f98082c4f802482777da0a2a, type: 3}
   stackable: 0
   maxStack: 1
   amount: 0
