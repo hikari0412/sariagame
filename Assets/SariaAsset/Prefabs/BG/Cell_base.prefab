@@ -598,8 +598,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.48, y: 1, z: 1.46}
-  m_Center: {x: 0, y: 0.5, z: 0.78}
+  m_Size: {x: 1.1, y: 1, z: 0.48}
+  m_Center: {x: 0.15, y: 0.5, z: 1.67}
 --- !u!114 &2580293869882263432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 0
-  selectedToolbar: 3
+  selectedToolbar: 0
   inputType: 0
   actionInput:
     useInput: 1
@@ -1158,7 +1158,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   matchPos: {x: 1, y: 0, z: 1}
-  matchRot: 0
+  matchRot: 1
   startMatchTarget: 0
   endMatchTarget: 0.3
   onPressActionDelay: 1.4
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 0
-  selectedToolbar: 3
+  selectedToolbar: 2
   inputType: 0
   actionInput:
     useInput: 1
@@ -2029,7 +2029,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   matchPos: {x: 1, y: 0, z: 1}
-  matchRot: 0
+  matchRot: 1
   startMatchTarget: 0
   endMatchTarget: 0.3
   onPressActionDelay: 1.4
@@ -2649,6 +2649,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 430397648338084952}
     m_Modifications:
+    - target: {fileID: 190832, guid: 2c08c0d81378ff14e93e590e27e40c1d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 196820, guid: 2c08c0d81378ff14e93e590e27e40c1d, type: 3}
       propertyPath: m_Name
       value: vActionText_ExampleA
@@ -2659,7 +2663,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11430320, guid: 2c08c0d81378ff14e93e590e27e40c1d, type: 3}
       propertyPath: m_Text
-      value: Interact
+      value: '
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 22447194, guid: 2c08c0d81378ff14e93e590e27e40c1d, type: 3}
       propertyPath: m_Pivot.x
@@ -2759,15 +2765,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22462718, guid: 2c08c0d81378ff14e93e590e27e40c1d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -214
+      value: -545.3
       objectReference: {fileID: 0}
     - target: {fileID: 22462718, guid: 2c08c0d81378ff14e93e590e27e40c1d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 107
+      value: 272.65
       objectReference: {fileID: 0}
     - target: {fileID: 22493032, guid: 2c08c0d81378ff14e93e590e27e40c1d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00062561035
+      value: 0.00061035156
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11426842, guid: 2c08c0d81378ff14e93e590e27e40c1d, type: 3}
