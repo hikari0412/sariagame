@@ -387,7 +387,17 @@ ModelImporter:
   - first:
       137: 13700000
     second: Blueisland
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blueisland_Character_Mat1
+    second: {fileID: 2100000, guid: 9049b9201173d354f8b82398487905b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blueisland_Character_Mat2
+    second: {fileID: 2100000, guid: fe208080a7b0e6543b1f7de8ad19242c, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
