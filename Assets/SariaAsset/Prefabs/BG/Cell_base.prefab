@@ -454,7 +454,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ee3384dd2d02dd04d89224d096842a1d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -617,7 +617,7 @@ MonoBehaviour:
   selectedToolbar: 0
   getItemByName: 0
   itemName: vKeyCard Red
-  itemID: 10
+  itemID: 17
   useTriggerStay: 1
   desiredAmount: 1
   onContains:

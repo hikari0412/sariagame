@@ -66,11 +66,11 @@ MonoBehaviour:
     cameraMode: 0
   - Name: Strafing
     forward: -1
-    right: 0.82
+    right: 0
     defaultDistance: 1.35
-    maxDistance: 1.5
-    minDistance: 0.25
-    height: 1.6
+    maxDistance: 2.5
+    minDistance: 0.6
+    height: 1.4
     smooth: 10
     smoothDamp: 10
     xMouseSensitivity: 1
@@ -83,7 +83,7 @@ MonoBehaviour:
     cullingHeight: 1.5
     cullingMinDist: 0.1
     fov: 71.1
-    useZoom: 0
+    useZoom: 1
     fixedAngle: {x: 0, y: 0}
     lookPoints: []
     cameraMode: 0
