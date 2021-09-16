@@ -23,7 +23,7 @@ namespace Invector
             return exitValue;
         }
 
-        override public sealed void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+        override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             if (setOnEnter)
             {

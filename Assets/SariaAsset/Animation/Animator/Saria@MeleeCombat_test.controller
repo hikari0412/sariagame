@@ -95,6 +95,7 @@ MonoBehaviour:
   exitValue: 0
   randomEnter: 0
   randomExit: 0
+  useEnterInverseValue: 1
 --- !u!1109 &-8237075717758875233
 AnimatorTransition:
   m_ObjectHideFlags: 1
@@ -40583,6 +40584,7 @@ MonoBehaviour:
   exitValue: 0
   randomEnter: 0
   randomExit: 0
+  useEnterInverseValue: 0
 --- !u!1109 &6907765096811684917
 AnimatorTransition:
   m_ObjectHideFlags: 1

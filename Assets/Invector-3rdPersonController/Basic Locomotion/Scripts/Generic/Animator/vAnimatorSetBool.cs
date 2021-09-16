@@ -6,6 +6,8 @@
         public bool randomEnter;       
         public bool randomExit;      
 
+        public bool useEnterInverseValue = false;
+
         protected override bool GetEnterValue()
         {
             return randomEnter ? UnityEngine.Random.Range(0,100)>50 : base.GetEnterValue();
@@ -15,9 +17,15 @@
             return randomExit ? UnityEngine.Random.Range(0, 100)>50 : base.GetExitValue();
         }
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-        //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        //
-        //}
+        override public void OnStateEnter(UnityEngine.Animator animator, UnityEngine.AnimatorStateInfo stateInfo, int layerIndex)
+        {
+            if (setOnEnter)
+            {
+                var enterValue = GetEnterValue();
+                enterValue = useEnterInverseValue ? !animator.GetBool(animatorParameter) : enterValue;
+                animator.SetBool(animatorParameter, enterValue);
+            }
+        }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
         //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
