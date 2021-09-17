@@ -971,7 +971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 0
-  selectedToolbar: 0
+  selectedToolbar: 1
   inputType: 0
   actionInput:
     useInput: 1
@@ -998,7 +998,7 @@ MonoBehaviour:
   disableCollision: 1
   disableGravity: 1
   activeFromForward: 1
-  forwardAngle: 35
+  forwardAngle: 100
   useTriggerRotation: 1
   destroyAfter: 0
   destroyDelay: 1.5
@@ -1841,7 +1841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 0
-  selectedToolbar: 2
+  selectedToolbar: 1
   inputType: 0
   actionInput:
     useInput: 1
@@ -1868,7 +1868,7 @@ MonoBehaviour:
   disableCollision: 1
   disableGravity: 1
   activeFromForward: 1
-  forwardAngle: 35
+  forwardAngle: 100
   useTriggerRotation: 1
   destroyAfter: 0
   destroyDelay: 1.5
@@ -2285,7 +2285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 0
-  selectedToolbar: 3
+  selectedToolbar: 1
   inputType: 0
   actionInput:
     useInput: 1
@@ -2312,7 +2312,7 @@ MonoBehaviour:
   disableCollision: 1
   disableGravity: 1
   activeFromForward: 1
-  forwardAngle: 35
+  forwardAngle: 100
   useTriggerRotation: 1
   destroyAfter: 0
   destroyDelay: 1.5
