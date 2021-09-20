@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/SariaAsset/Scence/Saria_Main Scene.unity
+    guid: 9bd22b558eaa8a844b8f9a972c11cbba
+  - enabled: 1
+    path: Assets/SariaAsset/Scence/Start Scene.unity
+    guid: 3b47c37b5b9f2e24aa953c1d69fbde59
   m_configObjects: {}
