@@ -218,6 +218,7 @@ namespace Invector.vCharacterController
 
         // action bools
         internal bool
+            isSiting,
             isRolling,
             isJumping,
             isInAirborne,
