@@ -437,6 +437,25 @@ namespace Invector.vCharacterController
             RollInput();
         }
 
+        public void IsMoveInput() {
+
+            if (cc.input.magnitude > 0.1f)
+            {
+                cc.animator.SetBool("IsMove", true);
+                //能跑就行 难看也不管了
+                if (cc.isSiting)
+                {
+                    cc.isSiting = false;
+                    cc.healthRecovery = 0;
+                }
+                
+            }
+            else
+            {
+                cc.animator.SetBool("IsMove", false);
+            }
+        }
+
         public virtual void MoveInput()
         {
             if (!lockMoveInput)

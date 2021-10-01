@@ -279,6 +279,19 @@ namespace Invector.vCharacterController
             ReduceStamina(rollStamina, false);
             currentStaminaRecoveryDelay = 2f;
         }
+        
+        public virtual void Sit()
+        {
+            isSiting = true;
+            healthRecovery = 10;
+            if (currentHealth < maxHealth && this.gameObject.activeInHierarchy && !inHealthRecovery)
+                StartCoroutine(RecoverHealth());
+        }
+        public void ShowSit(GameObject obj) {
+            if (!isSiting) {
+                obj.SetActive(true);
+            }
+        }
 
         #region Check Action Triggers 
 
