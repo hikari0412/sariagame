@@ -546,6 +546,16 @@ namespace Invector.vCharacterController.vActions
             if (triggerAction && actionStarted && triggerAction.endActionManualy) EndAction();
         }
 
+        public virtual IEnumerator OnPreActionDelay()
+        {
+            triggerAction.OnPreEvent.Invoke();
+            TriggerActionEvents();
+            //判断上半身图层的动画 但移动时坐下就无法正确检测
+            while (tpInput.cc.animator.GetCurrentAnimatorStateInfo(3).normalizedTime < 0.95f)
+            yield return null;
+            TriggerAnimation();
+        }
+
         public virtual void TriggerActionInput()
         {
             if (triggerAction == null || !triggerAction.gameObject.activeInHierarchy)
@@ -556,16 +566,29 @@ namespace Invector.vCharacterController.vActions
             // AutoAction
             if (triggerAction.inputType == vTriggerGenericAction.InputType.AutoAction && actionConditions)
             {
-                TriggerActionEvents();
-                TriggerAnimation();
+                if (triggerAction.preEvent)
+                {
+                    StartCoroutine(OnPreActionDelay());
+                }
+                else
+                {
+                    TriggerActionEvents();
+                    TriggerAnimation();
+                }
             }
             // GetButtonDown
             else if (triggerAction.inputType == vTriggerGenericAction.InputType.GetButtonDown && actionConditions)
             {
                 if (triggerAction.actionInput.GetButtonDown())
                 {
-                    TriggerActionEvents();
-                    TriggerAnimation();
+                    if (triggerAction.preEvent)
+                    {
+                        StartCoroutine(OnPreActionDelay());
+                    }
+                    else { 
+                        TriggerActionEvents();
+                        TriggerAnimation();
+                    }
                 }
             }
             // GetDoubleButton
@@ -573,8 +596,15 @@ namespace Invector.vCharacterController.vActions
             {
                 if (triggerAction.actionInput.GetDoubleButtonDown(triggerAction.doubleButtomTime))
                 {
-                    TriggerActionEvents();
-                    TriggerAnimation();
+                    if (triggerAction.preEvent)
+                    {
+                        StartCoroutine(OnPreActionDelay());
+                    }
+                    else
+                    {
+                        TriggerActionEvents();
+                        TriggerAnimation();
+                    }
                 }
             }
             // GetButtonTimer (Hold Button)
