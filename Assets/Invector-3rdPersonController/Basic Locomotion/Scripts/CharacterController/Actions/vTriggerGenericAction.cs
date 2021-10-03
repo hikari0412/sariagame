@@ -107,6 +107,11 @@ namespace Invector.vCharacterController.vActions
         [FormerlySerializedAs("onDoActionDelay")]
         public float onPressActionDelay;
 
+        public bool preEvent;
+
+        [Header("--- PRE EVENTS ---")]
+        public UnityEvent OnPreEvent;
+
         [Header("--- INPUT EVENTS ---")]
         [FormerlySerializedAs("OnDoAction")]
         public UnityEvent OnPressActionInput;

@@ -133,6 +133,16 @@ namespace Invector
             }
         }
 
+        public virtual void HideShowWeapon()
+        {
+            if (!IsEquipping)
+            {
+                if (CanHideRightWeapon() || CanHideLeftWeapon())
+                    HideWeapons();
+            }
+        }
+
+
         protected virtual void HideWeaponsAutomatically()
         {
             if (hideWeaponsAutomatically)
