@@ -206,19 +206,14 @@ namespace Invector.vItemManager
         public virtual void OnSubmit(vItemSlot slot)
         {
             currentSelectedSlot = slot;
+            CreateFullItemDescription(slot);
             onSubmitSlotCallback?.Invoke(slot);
             onSubmitSlot.Invoke(slot);
-
         }
 
         private vItemDisplay3D itemDisplay3D = null;
         public virtual void OnSelect(vItemSlot slot)
         {
-            currentSelectedSlot = slot;
-            CreateFullItemDescription(slot);
-            onSelectCallback?.Invoke(slot);
-            onSelectSlot.Invoke(slot);
-
             if (!itemDisplay3D)
                 itemDisplay3D = GameObject.FindObjectOfType<vItemDisplay3D>();
             if (itemDisplay3D)

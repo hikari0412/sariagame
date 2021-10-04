@@ -7,7 +7,8 @@ namespace Invector.vItemManager {
        [Description("(VALUE)")] Ammo=3,
        [Description("")] Archery=4,
        [Description("")] Builder=5,
-       [Description("")] Defense=6
+       [Description("")] Defense=6,
+       [Description("")] Sanityrest= 7
      }
      public enum vItemAttributes {
        [Description("")] Health=0,

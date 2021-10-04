@@ -51,11 +51,13 @@ namespace Invector.vItemManager
         }
 
         [vEditorToolbar("Events")]
+        [vHelpBox("你妈死了")]
         public ItemSlotEvent onSubmitSlotCallBack, onSelectSlotCallBack, onDeselectSlotCallBack;
         public OnHandleItemEvent onAddItem, onRemoveItem;
         public UnityEvent onEnable;
         public UnityEvent onDisable;
-        public UnityEvent onClick;
+        public UnityEvent onLeftClick;
+        public UnityEvent onRightClick;
 
         protected Selectable selectable;
         protected Color color = Color.white;
@@ -318,7 +320,7 @@ namespace Invector.vItemManager
         {
             if (isValid)
             {
-                onClick.Invoke();
+                onLeftClick.Invoke();
                 if (onSubmitSlotCallBack != null)
                     onSubmitSlotCallBack(this);
             }
@@ -326,12 +328,12 @@ namespace Invector.vItemManager
 
         public virtual void OnPointerEnter(PointerEventData eventData)
         {
-            //if(vInput.instance.inputDevice == InputDevice.MouseKeyboard)
+            /*//if(vInput.instance.inputDevice == InputDevice.MouseKeyboard)
             {
                 EventSystem.current.SetSelectedGameObject(this.gameObject);
                 if (onSelectSlotCallBack != null)
                     onSelectSlotCallBack(this);
-            }
+            }*/
         }
 
         public virtual void OnPointerExit(PointerEventData eventData)
@@ -355,7 +357,16 @@ namespace Invector.vItemManager
                 {
                     if (isValid)
                     {
-                        onClick.Invoke();
+                        onLeftClick.Invoke();
+                        if (onSelectSlotCallBack != null)
+                            onSelectSlotCallBack(this);
+                    }
+                }
+                else if (eventData.button == PointerEventData.InputButton.Right)
+                {
+                    if (isValid)
+                    {
+                        onRightClick.Invoke();
                         if (onSubmitSlotCallBack != null)
                             onSubmitSlotCallBack(this);
                     }
