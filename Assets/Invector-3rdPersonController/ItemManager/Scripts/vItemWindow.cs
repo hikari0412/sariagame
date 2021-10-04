@@ -214,6 +214,8 @@ namespace Invector.vItemManager
         private vItemDisplay3D itemDisplay3D = null;
         public virtual void OnSelect(vItemSlot slot)
         {
+            currentSelectedSlot = slot;
+            CreateFullItemDescription(slot);
             if (!itemDisplay3D)
                 itemDisplay3D = GameObject.FindObjectOfType<vItemDisplay3D>();
             if (itemDisplay3D)
