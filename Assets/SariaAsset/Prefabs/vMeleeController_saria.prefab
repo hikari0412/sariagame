@@ -76402,6 +76402,7 @@ MonoBehaviour:
   stepOffsetMinHeight: 0
   stepOffsetDistance: 0.1
   debugWindow: 0
+  meleeManager: {fileID: 0}
   applyingStepOffset: 0
   inputSmooth: {x: 0, y: 0, z: 0}
   moveDirection: {x: 0, y: 0, z: 0}

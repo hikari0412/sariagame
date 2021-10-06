@@ -271,6 +271,7 @@ namespace Invector.vCharacterController
         internal float verticalSpeed;                       // set the verticalSpeed based on the verticalInput
         internal float horizontalSpeed;                     // set the horizontalSpeed based on the horizontalInput       
         internal float moveSpeed;                           // set the current moveSpeed for the MoveCharacter method
+        internal float moveSpeedMultiplier = 1;
         internal float verticalVelocity;                    // set the vertical velocity of the rigidbody
         internal float colliderRadius, colliderHeight;      // storage capsule collider extra information                       
         internal float jumpMultiplier = 1;                  // internally used to set the jumpMultiplier
@@ -568,7 +569,12 @@ namespace Invector.vCharacterController
                 moveSpeed = Mathf.Lerp(moveSpeed, isSprinting ? speed.sprintSpeed : speed.runningSpeed, speed.movementSmooth * Time.deltaTime);
             }
         }
-
+        public void SetMoveSpeedMultiplier(float speed)  {
+            moveSpeedMultiplier = speed;
+        }
+        public virtual float GetMoveSpeed() {
+            return moveSpeed * moveSpeedMultiplier;
+        }
         public virtual void MoveCharacter(Vector3 _direction)
         {
             // calculate input smooth
@@ -587,8 +593,7 @@ namespace Invector.vCharacterController
             {
                 _direction.Normalize();
             }
-
-            Vector3 targetPosition = (useRootMotion ? animator.rootPosition : _rigidbody.position) + _direction * (stopMove ? 0 : moveSpeed) * (useRootMotion ? vTime.deltaTime : vTime.fixedDeltaTime);
+            Vector3 targetPosition = (useRootMotion ? animator.rootPosition : _rigidbody.position) + _direction * (stopMove ? 0 : GetMoveSpeed()) * (useRootMotion ? vTime.deltaTime : vTime.fixedDeltaTime);
             Vector3 targetVelocity = (targetPosition - transform.position) / (useRootMotion ? vTime.deltaTime : vTime.fixedDeltaTime);
 
             bool useVerticalVelocity = true;
