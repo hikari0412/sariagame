@@ -173,7 +173,7 @@ namespace Invector.vCharacterController
             if (speed.walkByDefault)
                 inputMagnitude = Mathf.Clamp(newInput.magnitude, 0, isSprinting ? runningSpeed : walkSpeed);
             else
-                inputMagnitude = Mathf.Clamp(isSprinting ? newInput.magnitude + 0.5f : newInput.magnitude, 0, isSprinting ? sprintSpeed : runningSpeed);
+                inputMagnitude = Mathf.Clamp(isSprinting ? newInput.magnitude + 0.5f : newInput.magnitude, 0, isDefending ? walkSpeed : isSprinting ? sprintSpeed : runningSpeed);
         }
 
         public virtual void ResetInputAnimatorParameters()

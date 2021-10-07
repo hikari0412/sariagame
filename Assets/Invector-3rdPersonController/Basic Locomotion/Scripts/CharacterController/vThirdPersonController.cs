@@ -161,7 +161,7 @@ namespace Invector.vCharacterController
         /// <param name="value"></param>
         public virtual void Sprint(bool value)
         {
-            var sprintConditions = (currentStamina > 0 && hasMovementInput && isGrounded && !customAction &&
+            var sprintConditions = (!isDefending && currentStamina > 0 && hasMovementInput && isGrounded && !customAction &&
                 !(isStrafing && !strafeSpeed.walkByDefault && (horizontalSpeed >= 0.5 || horizontalSpeed <= -0.5 || verticalSpeed <= 0.1f) && !sprintOnlyFree));
 
             if (value && sprintConditions)
@@ -278,6 +278,17 @@ namespace Invector.vCharacterController
             animator.CrossFadeInFixedTime("Roll", 0.1f);
             ReduceStamina(rollStamina, false);
             currentStaminaRecoveryDelay = 2f;
+        }
+
+        /// <summary>
+        /// 技能2
+        /// </summary>
+        public virtual void Skill2()
+        {
+            isSkill2 = true;
+            animator.CrossFadeInFixedTime("SariaSkill_02", 0.1f);
+            ReduceStamina(skill2Stamina, false);
+            currentStaminaRecoveryDelay = 6f;
         }
         
         public virtual void Sit()

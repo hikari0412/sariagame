@@ -18,6 +18,7 @@ namespace Invector.vCharacterController
         public float sprintStamina = 30f;
         public float jumpStamina = 30f;
         public float rollStamina = 25f;
+        public float skill2Stamina = 60f;
 
         [vEditorToolbar("Events", order = 7)]
         public UnityEvent OnJump;
@@ -220,9 +221,11 @@ namespace Invector.vCharacterController
         internal bool
             isSiting,
             isRolling,
+            isSkill2,
             isJumping,
             isInAirborne,
-            isTurningOnSpot;
+            isTurningOnSpot,
+            isDefending;
 
         internal bool customAction;
 
@@ -566,7 +569,7 @@ namespace Invector.vCharacterController
             }
             else
             {
-                moveSpeed = Mathf.Lerp(moveSpeed, isSprinting ? speed.sprintSpeed : speed.runningSpeed, speed.movementSmooth * Time.deltaTime);
+                moveSpeed = Mathf.Lerp(moveSpeed, isDefending ? speed.walkSpeed : isSprinting ? speed.sprintSpeed : speed.runningSpeed, speed.movementSmooth * Time.deltaTime);
             }
         }
         public void SetMoveSpeedMultiplier(float speed)  {
