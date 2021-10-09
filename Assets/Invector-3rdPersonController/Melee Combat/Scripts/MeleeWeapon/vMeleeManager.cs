@@ -34,6 +34,14 @@ namespace Invector.vMelee
         [Range(0, 180)]
         public float defaultDefenseRange = 90;
 
+        public float skill1CD;
+        public float skill2CD;
+        public float skill3CD;
+
+        internal float currentSkill1CD;
+        internal float currentSkill2CD;
+        internal float currentSkill3CD;
+
         [HideInInspector]
         public vIMeleeFighter fighter;
         private int damageMultiplier;
@@ -197,6 +205,19 @@ namespace Invector.vMelee
             {
                 rightWeapon.OnDefense();
             }
+        }
+
+        public virtual bool IsEquipWeapon (){
+            bool ret = false;
+            if (leftWeapon != null)
+            {
+                ret = leftWeapon.CompareTag("Weapon");
+            }
+            if (rightWeapon != null)
+            {
+                ret = rightWeapon.CompareTag("Weapon");
+            }
+            return ret;
         }
 
         /// <summary>

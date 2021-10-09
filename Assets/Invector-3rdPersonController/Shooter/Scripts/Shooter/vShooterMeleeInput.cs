@@ -355,7 +355,7 @@ namespace Invector.vCharacterController
 
                 if (shooterManager.canUseMeleeStrongAttack_H || shooterManager.CurrentWeapon == null)
                 {
-                    MeleeStrongAttackInput();
+                    Skill1Input();
                 }
 
                 if (shooterManager.canUseMeleeBlock_H || shooterManager.CurrentWeapon == null)
@@ -398,7 +398,7 @@ namespace Invector.vCharacterController
                     }
                     if (shooterManager.canUseMeleeStrongAttack_E)
                     {
-                        MeleeStrongAttackInput();
+                        Skill1Input();
                     }
                     if (shooterManager.canUseMeleeBlock_E)
                     {
@@ -469,10 +469,10 @@ namespace Invector.vCharacterController
         /// <summary>
         /// Override the Melee TriggerStrongAttack method to add the call to CancelReload when attacking
         /// </summary>
-        public override void TriggerStrongAttack()
+        public override void TriggerSkill1()
         {
             shooterManager.CancelReload();
-            base.TriggerStrongAttack();
+            base.TriggerSkill1();
         }
 
         /// <summary>

@@ -230,7 +230,7 @@ namespace Invector
                 return false;
             else
             {
-                return melee.weakAttackInput.GetButton()&& meleeWeakAttack || melee.strongAttackInput.GetButton() && meleeStrongAttack|| melee.blockInput.GetButton() && meleeBlock;
+                return melee.weakAttackInput.GetButton()&& meleeWeakAttack || melee.skill1Input.GetButton() && meleeStrongAttack|| melee.blockInput.GetButton() && meleeBlock;
             }
         }
 

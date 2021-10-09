@@ -32,7 +32,6 @@ namespace Invector.vCharacterController
         public GenericInput strafeInput = new GenericInput("Tab", "RightStickClick", "RightStickClick");
         public GenericInput jumpInput = new GenericInput("Space", "X", "X");
         public GenericInput rollInput = new GenericInput("Q", "B", "B");
-        public GenericInput skill2Input = new GenericInput("Alpha2", "", "");
 
         [HideInInspector] public bool lockInput;
 
@@ -436,7 +435,6 @@ namespace Invector.vCharacterController
             StrafeInput();
             JumpInput();
             RollInput();
-            Skill2Input();
         }
 
         public void IsMoveInput() {
@@ -559,29 +557,6 @@ namespace Invector.vCharacterController
             if (rollInput.GetButtonDown() && RollConditions())
             {
                 cc.Roll();
-            }
-        }
-
-        /// <summary>
-        /// Conditions to trigger the Roll animation & behavior
-        /// </summary>
-        /// <returns></returns>
-        protected virtual bool Skill2Conditions()
-        {
-            return !cc.isRolling && !cc.customAction && cc.isGrounded && cc.currentStamina > cc.skill2Stamina && !cc.isJumping;
-        }
-
-        public UnityEvent onSkill2;
-
-        /// <summary>
-        /// Input to trigger the Roll
-        /// </summary>
-        protected virtual void Skill2Input()
-        {
-            if (skill2Input.GetButtonDown() && Skill2Conditions())
-            {
-                onSkill2.Invoke();
-                cc.Skill2();
             }
         }
 

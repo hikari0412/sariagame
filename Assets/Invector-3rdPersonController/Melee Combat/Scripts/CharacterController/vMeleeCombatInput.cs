@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
+
 
 namespace Invector.vCharacterController
 {
@@ -15,7 +17,9 @@ namespace Invector.vCharacterController
         [vEditorToolbar("Inputs")]
         [Header("Melee Inputs")]
         public GenericInput weakAttackInput = new GenericInput("Mouse0", "RB", "RB");
-        public GenericInput strongAttackInput = new GenericInput("Alpha1", false, "RT", true, "RT", false);
+        public GenericInput skill1Input = new GenericInput("Alpha1", false, "RT", true, "RT", false);   // 急救输出版
+        public GenericInput skill2Input = new GenericInput("Alpha2", "", "");                           // 药物配置输出版
+        public GenericInput skill3Input = new GenericInput("Alpha3", "", "");                           // 钙质化
         public GenericInput blockInput = new GenericInput("Mouse1", "LB", "LB");        
 
         internal vMeleeManager meleeManager;
@@ -81,7 +85,8 @@ namespace Invector.vCharacterController
             if (MeleeAttackConditions() && !lockMeleeInput)
             {
                 MeleeWeakAttackInput();
-                MeleeStrongAttackInput();
+                Skill1Input();
+                Skill2Input();
                 BlockingInput();
             }
             else
@@ -115,30 +120,41 @@ namespace Invector.vCharacterController
         /// <summary>
         /// STRONG ATK INPUT
         /// </summary>
-        public virtual void MeleeStrongAttackInput()
+        public virtual void Skill1Input()
         {
             if (cc.animator == null) return;
 
-            if (strongAttackInput.GetButtonDown() && (!meleeManager.CurrentActiveAttackWeapon || meleeManager.CurrentActiveAttackWeapon.useStrongAttack) && MeleeAttackStaminaConditions())
+            if (skill1Input.GetButtonDown() && (!meleeManager.CurrentActiveAttackWeapon || meleeManager.CurrentActiveAttackWeapon.useStrongAttack) && MeleeAttackStaminaConditions() && meleeManager.currentSkill1CD <= 0.01f && meleeManager.IsEquipWeapon())
             {
-                TriggerStrongAttack();
+                onSkill1.Invoke();
+                meleeManager.currentSkill1CD = meleeManager.skill1CD;
+                TriggerSkill1();
             }
         }
 
-        public virtual void TriggerStrongAttack()
+        /// <summary>
+        /// Conditions to trigger the Roll animation & behavior
+        /// </summary>
+        /// <returns></returns>
+        protected virtual bool Skill2Conditions()
         {
-            cc.animator.SetInteger(vAnimatorParameters.AttackID, AttackID);
-            cc.animator.SetTrigger(vAnimatorParameters.StrongAttack);
+            return !cc.isRolling && !cc.customAction && cc.isGrounded && cc.currentStamina > cc.skill2Stamina && !cc.isJumping && meleeManager.currentSkill2CD <= 0.01f && meleeManager.IsEquipWeapon();
         }
 
-        /// <summary>
-        /// BLOCK INPUT
-        /// </summary>
-        public virtual void BlockingInput()
-        {
-            if (cc.animator == null) return;
+        public UnityEvent onSkill1;
+        public UnityEvent onSkill2;
 
-            isBlocking = blockInput.GetButton() && cc.currentStamina > 0 && !cc.customAction && !isAttacking;
+        /// <summary>
+        /// Input to trigger the Roll
+        /// </summary>
+        protected virtual void Skill2Input()
+        {
+            if (skill2Input.GetButtonDown() && Skill2Conditions())
+            {
+                onSkill2.Invoke();
+                meleeManager.currentSkill2CD = meleeManager.skill2CD;
+                cc.Skill2();
+            }
         }
 
         /// <summary>
@@ -150,8 +166,24 @@ namespace Invector.vCharacterController
             {
                 bool canSprint = cc.useContinuousSprint ? sprintInput.GetButtonDown() : sprintInput.GetButton();
                 cc.Sprint(canSprint && !isAttacking);
-            }                
+            }
         }
+
+        public virtual void TriggerSkill1()
+        {
+            cc.animator.SetInteger(vAnimatorParameters.AttackID, AttackID);
+            cc.animator.SetTrigger(vAnimatorParameters.Skill1Attack);
+        }
+        /// <summary>
+        /// BLOCK INPUT
+        /// </summary>
+        public virtual void BlockingInput()
+        {
+            if (cc.animator == null) return;
+
+            isBlocking = blockInput.GetButton() && cc.currentStamina > 0 && !cc.customAction && !isAttacking;
+        }
+
 
         #endregion
 
@@ -263,7 +295,7 @@ namespace Invector.vCharacterController
         public virtual void ResetAttackTriggers()
         {
             cc.animator.ResetTrigger(vAnimatorParameters.WeakAttack);
-            cc.animator.ResetTrigger(vAnimatorParameters.StrongAttack);
+            cc.animator.ResetTrigger(vAnimatorParameters.Skill1Attack);
         }
 
         public virtual void BreakAttack(int breakAtkID)
@@ -278,7 +310,7 @@ namespace Invector.vCharacterController
             cc.animator.SetTrigger(vAnimatorParameters.TriggerRecoil);
             cc.animator.SetTrigger(vAnimatorParameters.ResetState);
             cc.animator.ResetTrigger(vAnimatorParameters.WeakAttack);
-            cc.animator.ResetTrigger(vAnimatorParameters.StrongAttack);
+            cc.animator.ResetTrigger(vAnimatorParameters.Skill1Attack);
         }
 
         public virtual void OnReceiveAttack(vDamage damage, vIMeleeFighter attacker)
@@ -318,6 +350,6 @@ namespace Invector.vCharacterController
         public static int RecoilID = Animator.StringToHash("RecoilID");
         public static int TriggerRecoil = Animator.StringToHash("TriggerRecoil");
         public static int WeakAttack = Animator.StringToHash("WeakAttack");
-        public static int StrongAttack = Animator.StringToHash("StrongAttack");
+        public static int Skill1Attack = Animator.StringToHash("Skill1Attack");
     }
 }
