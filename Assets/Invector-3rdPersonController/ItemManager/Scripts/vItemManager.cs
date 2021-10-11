@@ -1259,7 +1259,7 @@ namespace Invector.vItemManager
                     ItemReference itemReference = new ItemReference(items[i].id);
                     for (int a = 0; a < sameItens.Count; a++)
                     {
-                        if (sameItens[a].type != vItemType.Consumable)
+                        if (sameItens[a].type != vItemType.Consumable || sameItens[a].type != vItemType.Sanityrest)
                         {
                             var equipPoint = equipPoints.Find(ep => ep.equipmentReference != null && ep.equipmentReference.item == sameItens[a]);
                             if (equipPoint != null && equipPoint.equipmentReference.equipedObject != null)

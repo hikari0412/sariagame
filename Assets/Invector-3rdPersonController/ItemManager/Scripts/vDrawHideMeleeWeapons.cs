@@ -95,11 +95,13 @@ namespace Invector
             if (CanHideRightWeapon())
             {
                 weaponsHided = true;
+                melee.meleeManager.currentRightWeapon = null;
                 HideRightWeapon(immediate);
             }
 
             else if (CanHideLeftWeapon())
             {
+                melee.meleeManager.currentLeftWeapon = null;
                 weaponsHided = true;
                 HideLeftWeapon(immediate);
             }
@@ -123,12 +125,14 @@ namespace Invector
             {
                 previouslyWeaponsHided = weaponsHided;
                 weaponsHided = false;
+                melee.meleeManager.currentRightWeapon = melee.meleeManager.rightWeapon;
                 DrawRightWeapon(immediate);
             }
             else if (CanDrawLeftWeapon())
             {
                 previouslyWeaponsHided = weaponsHided;
                 weaponsHided = false;
+                melee.meleeManager.currentLeftWeapon = melee.meleeManager.leftWeapon;
                 DrawLeftWeapon(immediate);
             }
         }

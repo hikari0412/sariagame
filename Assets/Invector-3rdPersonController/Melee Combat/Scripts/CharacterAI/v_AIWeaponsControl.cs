@@ -203,7 +203,7 @@ namespace Invector.vCharacterController.AI
                 {
                     equipTimer = item.enableDelayTime;
                     var type = item.type;
-                    if (type != vItemType.Consumable && (!ai.isDead))
+                    if (type != vItemType.Consumable || type != vItemType.Sanityrest && (!ai.isDead))
                     {
                         if (!string.IsNullOrEmpty(item.EnableAnim))
                         {
@@ -253,7 +253,7 @@ namespace Invector.vCharacterController.AI
                 {
                     unequipTimer = item.enableDelayTime;
                     var type = item.type;
-                    if (type != vItemType.Consumable)
+                    if (type != vItemType.Consumable || type != vItemType.Sanityrest)
                     {
                         if(!string.IsNullOrEmpty(item.DisableAnim))
                         {

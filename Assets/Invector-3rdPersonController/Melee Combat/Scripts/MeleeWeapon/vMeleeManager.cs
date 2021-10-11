@@ -18,7 +18,7 @@ namespace Invector.vMelee
         public List<vBodyMember> Members = new List<vBodyMember>();
         public vDamage defaultDamage = new vDamage(10);
         public HitProperties hitProperties;
-        public vMeleeWeapon leftWeapon, rightWeapon;
+        public vMeleeWeapon leftWeapon, rightWeapon, currentLeftWeapon, currentRightWeapon;
         public vOnHitEvent onDamageHit, onRecoilHit;
         public OnEquipWeaponEvent onEquipWeapon;
         #endregion
@@ -209,13 +209,13 @@ namespace Invector.vMelee
 
         public virtual bool IsEquipWeapon (){
             bool ret = false;
-            if (leftWeapon != null)
+            if (currentLeftWeapon != null)
             {
-                ret = leftWeapon.CompareTag("Weapon");
+                ret = currentLeftWeapon.CompareTag("Weapon");
             }
-            if (rightWeapon != null)
+            if (currentRightWeapon != null)
             {
-                ret = rightWeapon.CompareTag("Weapon");
+                ret = currentRightWeapon.CompareTag("Weapon");
             }
             return ret;
         }
@@ -412,6 +412,7 @@ namespace Invector.vMelee
                 leftWeapon = weapon;
                 leftWeapon.SetActiveDamage(false);
                 leftWeapon.meleeManager = this;
+                currentLeftWeapon = weapon;
             }
             else leftWeapon = null;
         }
@@ -428,6 +429,7 @@ namespace Invector.vMelee
                 rightWeapon = weapon;
                 rightWeapon.meleeManager = this;
                 rightWeapon.SetActiveDamage(false);
+                currentRightWeapon = weapon;
             }
             else
             {                

@@ -292,7 +292,7 @@ namespace Invector.vItemManager
         }
 
         /// <summary>
-        /// Input to change the current equipSlot
+        /// 小键盘切换道具
         /// </summary>
         protected virtual void ChangeEquipmentInput()
         {

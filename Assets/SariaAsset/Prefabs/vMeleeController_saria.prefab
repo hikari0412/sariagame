@@ -46539,7 +46539,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9202858201865153378}
   - component: {fileID: 9202858201865153391}
-  - component: {fileID: 9202858201865153388}
   - component: {fileID: 9202858201865153389}
   m_Layer: 5
   m_Name: EquipmentDisplayWindow
@@ -46583,54 +46582,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &9202858201865153388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9202858201865153379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5f8d7f4b54ee5648818cf43b799bb4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openCloseEvents: 1
-  openCloseWindow: 1
-  selectedToolbar: 0
-  group: {fileID: 9202858201865153391}
-  fadeSpeed: 2
-  onStartFadeIn:
-    m_PersistentCalls:
-      m_Calls: []
-  onFinishFadeIn:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 9202858201865153389}
-        m_MethodName: DoEvent
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onStartFadeOut:
-    m_PersistentCalls:
-      m_Calls: []
-  onFinishFadeOut:
-    m_PersistentCalls:
-      m_Calls: []
-  OnChangeValue:
-    m_PersistentCalls:
-      m_Calls: []
-  autoControlCanvasGroup: 0
-  fadeInStart: 0
-  fadeOutStart: 0
-  startWithAlphaZero: 0
-  startWithAlphaFull: 1
 --- !u!114 &9202858201865153389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46656,7 +46607,8 @@ MonoBehaviour:
     onDoEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 9202858201865153388}
+        - m_Target: {fileID: 9202858201865153388, guid: dfc96ab9779bc754f98e923ba5c12c34,
+            type: 3}
           m_MethodName: FadeOut
           m_Mode: 1
           m_Arguments:
@@ -60233,7 +60185,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 9202858201865153388}
+      - m_Target: {fileID: 9202858201865153388, guid: dfc96ab9779bc754f98e923ba5c12c34,
+          type: 3}
         m_MethodName: AlphaFull
         m_Mode: 1
         m_Arguments:
@@ -61394,7 +61347,8 @@ MonoBehaviour:
   onEnable:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9202858201865153388}
+      - m_Target: {fileID: 9202858201865153388, guid: dfc96ab9779bc754f98e923ba5c12c34,
+          type: 3}
         m_MethodName: AlphaZero
         m_Mode: 1
         m_Arguments:
@@ -65115,6 +65069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9202858202183760697}
   - component: {fileID: 9202858202183760696}
+  - component: {fileID: 156401480}
   m_Layer: 5
   m_Name: skill icon
   m_TagString: Untagged
@@ -65169,6 +65124,22 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!114 &156401480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9202858202183760702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cfad1a31a97eb4da27dd38769cebc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeManager: {fileID: 9202858203336158892}
+  skill1UI: {fileID: 9202858203576860381}
+  skill2UI: {fileID: 9202858203249755892}
+  skill3UI: {fileID: 9202858203261702704}
 --- !u!1 &9202858202183769420
 GameObject:
   m_ObjectHideFlags: 0
@@ -95623,7 +95594,7 @@ SkinnedMeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -122386,7 +122357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 0
   unlockCursorOnStart: 0
   showCursorOnStart: 0
   toggleWalk: 301
@@ -122495,21 +122466,6 @@ MonoBehaviour:
     timeButtonWasPressed: 0
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
-  skill2Input:
-    useInput: 1
-    isAxisInUse: 0
-    keyboard: Alpha2
-    keyboardAxis: 0
-    joystick: 
-    joystickAxis: 0
-    mobile: 
-    mobileAxis: 0
-    joystickAxisInvert: 0
-    keyboardAxisInvert: 0
-    mobileAxisInvert: 0
-    timeButtonWasPressed: 0
-    lastTimeTheButtonWasPressed: 0
-    inButtomTimer: 0
   lockInput: 0
   lockCameraInput: 0
   invertCameraInputVertical: 0
@@ -122580,20 +122536,6 @@ MonoBehaviour:
   cc: {fileID: 0}
   hud: {fileID: 0}
   lockMoveInput: 0
-  onSkill2:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: A
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   weakAttackInput:
     useInput: 1
     isAxisInUse: 0
@@ -122609,7 +122551,7 @@ MonoBehaviour:
     timeButtonWasPressed: 0
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
-  strongAttackInput:
+  skill1Input:
     useInput: 1
     isAxisInUse: 0
     keyboard: Alpha1
@@ -122617,6 +122559,36 @@ MonoBehaviour:
     joystick: RT
     joystickAxis: 1
     mobile: RT
+    mobileAxis: 0
+    joystickAxisInvert: 0
+    keyboardAxisInvert: 0
+    mobileAxisInvert: 0
+    timeButtonWasPressed: 0
+    lastTimeTheButtonWasPressed: 0
+    inButtomTimer: 0
+  skill2Input:
+    useInput: 1
+    isAxisInUse: 0
+    keyboard: Alpha2
+    keyboardAxis: 0
+    joystick: 
+    joystickAxis: 0
+    mobile: 
+    mobileAxis: 0
+    joystickAxisInvert: 0
+    keyboardAxisInvert: 0
+    mobileAxisInvert: 0
+    timeButtonWasPressed: 0
+    lastTimeTheButtonWasPressed: 0
+    inButtomTimer: 0
+  skill3Input:
+    useInput: 1
+    isAxisInUse: 0
+    keyboard: Alpha3
+    keyboardAxis: 0
+    joystick: 
+    joystickAxis: 0
+    mobile: 
     mobileAxis: 0
     joystickAxisInvert: 0
     keyboardAxisInvert: 0
@@ -122640,6 +122612,23 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   lockMeleeInput: 0
+  onSkill1:
+    m_PersistentCalls:
+      m_Calls: []
+  onSkill2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: A
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &9202858203336158892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122700,6 +122689,8 @@ MonoBehaviour:
       m_Bits: 1
   leftWeapon: {fileID: 0}
   rightWeapon: {fileID: 0}
+  currentLeftWeapon: {fileID: 0}
+  currentRightWeapon: {fileID: 0}
   onDamageHit:
     m_PersistentCalls:
       m_Calls: []
@@ -122714,6 +122705,9 @@ MonoBehaviour:
   defaultStaminaRecoveryDelay: 1
   defaultDefenseRate: 85
   defaultDefenseRange: 80
+  skill1CD: 2
+  skill2CD: 3
+  skill3CD: 4
 --- !u!114 &9202858203336158929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122974,7 +122968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 0
-  selectedToolbar: 0
+  selectedToolbar: 1
   OnDoAction:
     m_PersistentCalls:
       m_Calls: []
@@ -128807,7 +128801,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 9202858201865153388}
+      - m_Target: {fileID: 9202858201865153388, guid: dfc96ab9779bc754f98e923ba5c12c34,
+          type: 3}
         m_MethodName: AlphaZero
         m_Mode: 1
         m_Arguments:
@@ -131415,7 +131410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 0
+  selectedToolbar: 2
   playItemAnimation: 1
   timeScaleWhileIsOpen: 0
   dontDestroyOnLoad: 1
@@ -131698,32 +131693,10 @@ MonoBehaviour:
       m_Calls: []
   onEquipItem:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 9202858201865153388}
-        m_MethodName: FadeIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onUnequipItem:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 9202858201865153388}
-        m_MethodName: FadeIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   isOpen: 0
   canEquip: 0
   lockInventoryInput: 0
@@ -132228,6 +132201,7 @@ Transform:
   - {fileID: 9202858202492138320}
   - {fileID: 9202858203249653895}
   - {fileID: 9202858202707887012}
+  - {fileID: 1532599919462273960}
   m_Father: {fileID: 9202858203596639797}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -133285,3 +133259,63 @@ Transform:
   m_Father: {fileID: 9202858202992073986}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &9202858202883476898
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 9202858203591668305}
+    m_Modifications:
+    - target: {fileID: 7706781870414863882, guid: 2961dbdbf3f224c4bb6caa63f761cd27,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706781870414863882, guid: 2961dbdbf3f224c4bb6caa63f761cd27,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00041294098
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706781870414863882, guid: 2961dbdbf3f224c4bb6caa63f761cd27,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706781870414863882, guid: 2961dbdbf3f224c4bb6caa63f761cd27,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00880909
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706781870414863882, guid: 2961dbdbf3f224c4bb6caa63f761cd27,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706781870414863882, guid: 2961dbdbf3f224c4bb6caa63f761cd27,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706781870414863882, guid: 2961dbdbf3f224c4bb6caa63f761cd27,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706781870414863882, guid: 2961dbdbf3f224c4bb6caa63f761cd27,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7708059463879224228, guid: 2961dbdbf3f224c4bb6caa63f761cd27,
+        type: 3}
+      propertyPath: m_Name
+      value: skill03VFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2961dbdbf3f224c4bb6caa63f761cd27, type: 3}
+--- !u!4 &1532599919462273960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7706781870414863882, guid: 2961dbdbf3f224c4bb6caa63f761cd27,
+    type: 3}
+  m_PrefabInstance: {fileID: 9202858202883476898}
+  m_PrefabAsset: {fileID: 0}
