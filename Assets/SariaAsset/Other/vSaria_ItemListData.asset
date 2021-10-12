@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 15
   description: "\u6062\u590D\u5C11\u91CF\u7406\u667A"
-  type: 0
+  type: 7
   icon: {fileID: 21300000, guid: 73f236f1c9d9b634ead4289508c92e0c, type: 3}
   stackable: 1
   maxStack: 50
@@ -886,7 +886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 16
   description: "\u6062\u590D\u5927\u91CF\u7406\u667A"
-  type: 0
+  type: 7
   icon: {fileID: 21300000, guid: 8eb7d2184c1a3e648bc77b51571a194c, type: 3}
   stackable: 1
   maxStack: 50

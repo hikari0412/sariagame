@@ -62,7 +62,7 @@ namespace Invector.vCharacterController.AI
         {
             if (weaponCtrl.itemCollection && weaponCtrl.itemCollection.items != null && weaponCtrl.itemCollection.itemListData && weaponCtrl.itemCollection.itemListData.items != null)
             {
-                var items = weaponCtrl.itemCollection.items.FindAll(_item => weaponCtrl.itemCollection.itemListData.items.Find(_item2 => _item2.id == _item.id && _item2.type != vItemType.Consumable));
+                var items = weaponCtrl.itemCollection.items.FindAll(_item => weaponCtrl.itemCollection.itemListData.items.Find(_item2 => _item2.id == _item.id && (_item2.type != vItemType.Consumable || _item2.type != vItemType.Sanityrest)));
                 string[] names = new string[items.Count];
                 ids = new int[items.Count];
                 for (int i = 0; i < names.Length; i++)
