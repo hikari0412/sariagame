@@ -372,7 +372,7 @@ namespace Invector.vItemManager
         /// <param name="changeEquip"></param>
         protected virtual void UseItemInput(ChangeEquipmentControl changeEquip)
         {
-            if (changeEquip.display != null && changeEquip.display.item != null && changeEquip.display.item.type == vItemType.Consumable)
+            if (changeEquip.display != null && changeEquip.display.item != null && changeEquip.display.item.type == vItemType.Consumable || changeEquip.display.item.type == vItemType.Sanityrest)
             {
                 if (changeEquip.useItemInput.GetButtonDown() && changeEquip.display.item.amount > 0)
                     OnUseItem(changeEquip.display.item);
