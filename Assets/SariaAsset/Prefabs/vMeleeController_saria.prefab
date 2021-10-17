@@ -8630,7 +8630,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648310728428884}
-  - component: {fileID: 863648310728428885}
   m_Layer: 8
   m_Name: J_Bip_C_Tail6
   m_TagString: Untagged
@@ -8653,37 +8652,6 @@ Transform:
   m_Father: {fileID: 863648311006738572}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648310728428885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648310728428887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 5000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 0}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.05
-  sphereColliders: []
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648310729553216
 GameObject:
   m_ObjectHideFlags: 0
@@ -26508,7 +26476,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648311006738572}
-  - component: {fileID: 863648311006738573}
   m_Layer: 8
   m_Name: J_Bip_C_Tail5
   m_TagString: Untagged
@@ -26531,37 +26498,6 @@ Transform:
   m_Father: {fileID: 863648311311473407}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648311006738573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648311006738575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 5000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 0}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.05
-  sphereColliders: []
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648311009443931
 GameObject:
   m_ObjectHideFlags: 0
@@ -32050,7 +31986,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648311051129507}
-  - component: {fileID: 863648311051129504}
   m_Layer: 8
   m_Name: J_Bip_C_Tail9
   m_TagString: Untagged
@@ -32073,37 +32008,6 @@ Transform:
   m_Father: {fileID: 863648312287177250}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648311051129504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648311051129506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 5000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 0}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.05
-  sphereColliders: []
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648311053293360
 GameObject:
   m_ObjectHideFlags: 0
@@ -45729,14 +45633,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648311200817806}
-  - component: {fileID: 863648311200817798}
   - component: {fileID: 863648311200817801}
   - component: {fileID: 863648311200817800}
   - component: {fileID: 863648311200817803}
   - component: {fileID: 863648311200817802}
   - component: {fileID: 863648311200817805}
   - component: {fileID: 863648311200817804}
+  - component: {fileID: 8838254319046885947}
   - component: {fileID: 863648311200817807}
+  - component: {fileID: 7221872904719921538}
+  - component: {fileID: 195415858513447043}
   m_Layer: 8
   m_Name: saria20210503forunity
   m_TagString: Player
@@ -45760,48 +45666,6 @@ Transform:
   m_Father: {fileID: 863648312501396348}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648311200817798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648311200817905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af276926b0db1c248a93ab3c1134a6c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  automaticUpdates: 1
-  isPaused: 0
-  simulationFrameRate: 60
-  dynamicRatio: 0.5
-  gravity: {x: 0, y: -10, z: 0}
-  bounce: 0
-  friction: 1
-  enableAngleLimits: 1
-  enableCollision: 1
-  enableLengthLimits: 1
-  collideWithGround: 1
-  groundHeight: 0
-  springBones:
-  - {fileID: 863648312143307227}
-  - {fileID: 863648311332234766}
-  - {fileID: 863648311311473404}
-  - {fileID: 863648311006738573}
-  - {fileID: 863648311371967688}
-  - {fileID: 863648312017545851}
-  - {fileID: 863648310728428885}
-  - {fileID: 863648311582013036}
-  - {fileID: 863648312287177251}
-  - {fileID: 863648311051129504}
-  - {fileID: 863648312242125825}
-  - {fileID: 863648312480212632}
-  boneColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  colliderColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  collisionColor: {r: 1, g: 0, b: 0, a: 1}
-  groundCollisionColor: {r: 0, g: 1, b: 0, a: 1}
-  angleLimitDrawScale: 0.05
 --- !u!114 &863648311200817801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46648,6 +46512,145 @@ MonoBehaviour:
   m_DistantDisable: 0
   m_ReferenceObject: {fileID: 0}
   m_DistanceToObject: 20
+--- !u!114 &8838254319046885947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863648311200817905}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ac8d30c6a0d9642a11e5be4c440740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Root: {fileID: 863648312143307226}
+  m_UpdateRate: 60
+  m_UpdateMode: 3
+  m_Damping: 0.5
+  m_DampingDistrib:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Elasticity: 0.1
+  m_ElasticityDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.1995247
+      outSlope: -0.1995247
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0048523
+      value: 0.79950714
+      inSlope: -0.1995247
+      outSlope: -0.1995247
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Stiffness: 0.9
+  m_StiffnessDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.99684906
+      inSlope: -0.5010778
+      outSlope: -0.5010778
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99360657
+      value: 0.4989749
+      inSlope: -0.5010778
+      outSlope: -0.5010778
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Inert: 0.1
+  m_InertDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.0013847351
+      inSlope: 1.0136558
+      outSlope: 1.0136558
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9874878
+      value: 1.0023575
+      inSlope: 1.0136558
+      outSlope: 1.0136558
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Friction: 0
+  m_FrictionDistrib:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Radius: 0.15
+  m_RadiusDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0041656494
+      value: 0.8588257
+      inSlope: 0.14649189
+      outSlope: 0.14649189
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9916687
+      value: 1.0047073
+      inSlope: 0.14649189
+      outSlope: 0.14649189
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_EndLength: 0
+  m_EndOffset: {x: 0, y: 0, z: 0}
+  m_Gravity: {x: 0, y: -0.02, z: 0}
+  m_Force: {x: 0, y: 0, z: 0}
+  m_Colliders: []
+  m_Exclusions: []
+  m_FreezeAxis: 0
+  m_DistantDisable: 0
+  m_ReferenceObject: {fileID: 0}
+  m_DistanceToObject: 20
 --- !u!114 &863648311200817807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46667,6 +46670,287 @@ MonoBehaviour:
   - {fileID: 863648311200817802}
   - {fileID: 863648311200817805}
   - {fileID: 863648311200817804}
+  - {fileID: 8838254319046885947}
+  - {fileID: 7221872904719921538}
+  - {fileID: 195415858513447043}
+--- !u!114 &7221872904719921538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863648311200817905}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ac8d30c6a0d9642a11e5be4c440740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Root: {fileID: 863648311371967691}
+  m_UpdateRate: 60
+  m_UpdateMode: 3
+  m_Damping: 0.7
+  m_DampingDistrib:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Elasticity: 0.1
+  m_ElasticityDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.1995247
+      outSlope: -0.1995247
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0048523
+      value: 0.79950714
+      inSlope: -0.1995247
+      outSlope: -0.1995247
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Stiffness: 0.9
+  m_StiffnessDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.99684906
+      inSlope: -0.5010778
+      outSlope: -0.5010778
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99360657
+      value: 0.4989749
+      inSlope: -0.5010778
+      outSlope: -0.5010778
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Inert: 0.1
+  m_InertDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.0013847351
+      inSlope: 1.0136558
+      outSlope: 1.0136558
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9874878
+      value: 1.0023575
+      inSlope: 1.0136558
+      outSlope: 1.0136558
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Friction: 0
+  m_FrictionDistrib:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Radius: 0.15
+  m_RadiusDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0041656494
+      value: 0.8588257
+      inSlope: 0.14649189
+      outSlope: 0.14649189
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9916687
+      value: 1.0047073
+      inSlope: 0.14649189
+      outSlope: 0.14649189
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_EndLength: 0
+  m_EndOffset: {x: 0, y: 0, z: 0}
+  m_Gravity: {x: 0, y: -0.05, z: 0}
+  m_Force: {x: 0, y: 0, z: 0}
+  m_Colliders: []
+  m_Exclusions: []
+  m_FreezeAxis: 0
+  m_DistantDisable: 0
+  m_ReferenceObject: {fileID: 0}
+  m_DistanceToObject: 20
+--- !u!114 &195415858513447043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863648311200817905}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ac8d30c6a0d9642a11e5be4c440740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Root: {fileID: 863648312017545850}
+  m_UpdateRate: 60
+  m_UpdateMode: 3
+  m_Damping: 0.7
+  m_DampingDistrib:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Elasticity: 0.1
+  m_ElasticityDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.1995247
+      outSlope: -0.1995247
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0048523
+      value: 0.79950714
+      inSlope: -0.1995247
+      outSlope: -0.1995247
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Stiffness: 0.9
+  m_StiffnessDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.99684906
+      inSlope: -0.5010778
+      outSlope: -0.5010778
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99360657
+      value: 0.4989749
+      inSlope: -0.5010778
+      outSlope: -0.5010778
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Inert: 0.1
+  m_InertDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.0013847351
+      inSlope: 1.0136558
+      outSlope: 1.0136558
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9874878
+      value: 1.0023575
+      inSlope: 1.0136558
+      outSlope: 1.0136558
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Friction: 0
+  m_FrictionDistrib:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Radius: 0.15
+  m_RadiusDistrib:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0041656494
+      value: 0.8588257
+      inSlope: 0.14649189
+      outSlope: 0.14649189
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9916687
+      value: 1.0047073
+      inSlope: 0.14649189
+      outSlope: 0.14649189
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_EndLength: 0
+  m_EndOffset: {x: 0, y: 0, z: 0}
+  m_Gravity: {x: 0, y: -0.05, z: 0}
+  m_Force: {x: 0, y: 0, z: 0}
+  m_Colliders: []
+  m_Exclusions: []
+  m_FreezeAxis: 0
+  m_DistantDisable: 0
+  m_ReferenceObject: {fileID: 0}
+  m_DistanceToObject: 20
 --- !u!1 &863648311203456410
 GameObject:
   m_ObjectHideFlags: 0
@@ -50605,7 +50889,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648311311473407}
-  - component: {fileID: 863648311311473404}
   m_Layer: 8
   m_Name: J_Bip_C_Tail4
   m_TagString: Untagged
@@ -50628,37 +50911,6 @@ Transform:
   m_Father: {fileID: 863648311332234865}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648311311473404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648311311473406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 5000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 0}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.05
-  sphereColliders: []
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648311313117747
 GameObject:
   m_ObjectHideFlags: 0
@@ -51536,7 +51788,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648311332234865}
-  - component: {fileID: 863648311332234766}
   m_Layer: 8
   m_Name: J_Bip_C_Tail3
   m_TagString: Untagged
@@ -51559,37 +51810,6 @@ Transform:
   m_Father: {fileID: 863648312143307226}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648311332234766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648311332234864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 5000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 0}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.05
-  sphereColliders: []
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648311332611481
 GameObject:
   m_ObjectHideFlags: 0
@@ -53500,7 +53720,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648311371967691}
-  - component: {fileID: 863648311371967688}
   m_Layer: 8
   m_Name: J_Bip_L_SideHair1_1
   m_TagString: Untagged
@@ -53523,38 +53742,6 @@ Transform:
   m_Father: {fileID: 863648311819160829}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648311371967688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648311371967690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 3000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 863648311819160829}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.015
-  sphereColliders:
-  - {fileID: 863648312482454162}
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648311372628668
 GameObject:
   m_ObjectHideFlags: 0
@@ -65871,7 +66058,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648311582013039}
-  - component: {fileID: 863648311582013036}
   m_Layer: 8
   m_Name: J_Bip_C_Tail7
   m_TagString: Untagged
@@ -65894,37 +66080,6 @@ Transform:
   m_Father: {fileID: 863648310728428884}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648311582013036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648311582013038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 5000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 0}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.05
-  sphereColliders: []
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648311583494618
 GameObject:
   m_ObjectHideFlags: 0
@@ -94655,7 +94810,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648312017545850}
-  - component: {fileID: 863648312017545851}
   m_Layer: 8
   m_Name: J_Bip_R_SideHair1_1
   m_TagString: Untagged
@@ -94678,38 +94832,6 @@ Transform:
   m_Father: {fileID: 863648311819160829}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648312017545851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648312017545853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 3000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 863648311819160829}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.015
-  sphereColliders:
-  - {fileID: 863648312482454162}
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648312021663046
 GameObject:
   m_ObjectHideFlags: 0
@@ -98091,7 +98213,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648312143307226}
-  - component: {fileID: 863648312143307227}
   m_Layer: 8
   m_Name: J_Bip_C_Tail2
   m_TagString: Untagged
@@ -98114,37 +98235,6 @@ Transform:
   m_Father: {fileID: 863648311045836388}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648312143307227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648312143307229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 5000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 0}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.05
-  sphereColliders: []
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648312144961672
 GameObject:
   m_ObjectHideFlags: 0
@@ -110549,7 +110639,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648312242125824}
-  - component: {fileID: 863648312242125825}
   m_Layer: 8
   m_Name: J_Bip_C_Tail10
   m_TagString: Untagged
@@ -110572,37 +110661,6 @@ Transform:
   m_Father: {fileID: 863648311051129507}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648312242125825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648312242125827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 5000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 0}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.05
-  sphereColliders: []
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648312246300233
 GameObject:
   m_ObjectHideFlags: 0
@@ -112088,7 +112146,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648312287177250}
-  - component: {fileID: 863648312287177251}
   m_Layer: 8
   m_Name: J_Bip_C_Tail8
   m_TagString: Untagged
@@ -112111,37 +112168,6 @@ Transform:
   m_Father: {fileID: 863648311582013039}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648312287177251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648312287177253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 5000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 0}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.05
-  sphereColliders: []
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648312287487869
 GameObject:
   m_ObjectHideFlags: 0
@@ -131704,7 +131730,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863648312480212635}
-  - component: {fileID: 863648312480212632}
   m_Layer: 8
   m_Name: J_Bip_C_Tail11
   m_TagString: Untagged
@@ -131727,37 +131752,6 @@ Transform:
   m_Father: {fileID: 863648312242125824}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863648312480212632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863648312480212634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03118221f4bfcd74ba0ad8075da02411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stiffnessForce: 5000
-  dragForce: 0.9
-  springForce: {x: 0, y: -0.0001, z: 0}
-  windInfluence: 1
-  pivotNode: {fileID: 0}
-  angularStiffness: 100
-  yAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  zAngleLimits:
-    active: 0
-    min: 0
-    max: 0
-  lengthLimitTargets: []
-  radius: 0.05
-  sphereColliders: []
-  capsuleColliders: []
-  panelColliders: []
 --- !u!1 &863648312482454167
 GameObject:
   m_ObjectHideFlags: 0
