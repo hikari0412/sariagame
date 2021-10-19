@@ -280,22 +280,13 @@ namespace Invector.vCharacterController
             currentStaminaRecoveryDelay = 2f;
         }
 
-        /// <summary>
-        /// 技能2
-        /// </summary>
-        public virtual void Skill2()
-        {
-            isSkill2 = true;
-            animator.CrossFadeInFixedTime("SariaSkill_02", 0.1f);
-            ReduceStamina(skill2Stamina, false);
-            currentStaminaRecoveryDelay = 6f;
-        }
+
         
         public virtual void Sit()
         {
             isSiting = true;
             healthRecovery = 10;
-            if (currentHealth < maxHealth && this.gameObject.activeInHierarchy && !inHealthRecovery)
+            if (this.gameObject.activeInHierarchy && !inHealthRecovery)
                 StartCoroutine(RecoverHealth());
         }
         public void ShowSit(GameObject obj) {

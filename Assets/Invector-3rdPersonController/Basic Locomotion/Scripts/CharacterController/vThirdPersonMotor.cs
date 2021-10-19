@@ -19,6 +19,7 @@ namespace Invector.vCharacterController
         public float jumpStamina = 30f;
         public float rollStamina = 25f;
         public float skill2Stamina = 60f;
+        public float skill3Stamina = 60f;
 
         [vEditorToolbar("Events", order = 7)]
         public UnityEvent OnJump;
@@ -221,7 +222,6 @@ namespace Invector.vCharacterController
         internal bool
             isSiting,
             isRolling,
-            isSkill2,
             isJumping,
             isInAirborne,
             isTurningOnSpot,
