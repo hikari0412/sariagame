@@ -418,6 +418,13 @@ namespace Invector.vCharacterController
 
         public override void TakeDamage(vDamage damage)
         {
+            vMelee.vMeleeManager meleeManager = GetComponent<vMelee.vMeleeManager>();
+            if (meleeManager != null) {
+                if (meleeManager.blockAttack > 0f) {
+                    Debug.Log("触发盾反");
+                    return;
+                }
+            }
             // don't apply damage if the character is rolling, you can add more conditions here
             if (currentHealth <= 0 || (IgnoreDamageRolling()))
             {

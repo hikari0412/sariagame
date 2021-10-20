@@ -44,6 +44,8 @@ namespace Invector.vMelee
         internal bool isSkill;
         public GameObject skill3Prefab;
 
+        internal float blockAttack;
+
         [HideInInspector]
         public vIMeleeFighter fighter;
         private int damageMultiplier;

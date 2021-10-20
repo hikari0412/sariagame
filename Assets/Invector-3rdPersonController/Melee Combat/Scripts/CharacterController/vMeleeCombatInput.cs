@@ -75,6 +75,11 @@ namespace Invector.vCharacterController
             base.FixedUpdate();
         }
 
+        protected override void Update() {
+            base.Update();
+            meleeManager.blockAttack -= Time.deltaTime;
+        }
+
         protected override void InputHandle()
         {
             if (cc == null || cc.isDead)
@@ -225,6 +230,9 @@ namespace Invector.vCharacterController
             if (cc.animator == null) return;
 
             isBlocking = blockInput.GetButton() && cc.currentStamina > 0 && !cc.customAction && !isAttacking;
+            if (blockInput.GetButtonDown() && cc.currentStamina > 0 && !cc.customAction && !isAttacking) {
+                meleeManager.blockAttack = 0.15f;
+            }
         }
 
 
