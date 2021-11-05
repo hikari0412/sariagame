@@ -75,6 +75,11 @@ namespace Invector.vCharacterController
             base.FixedUpdate();
         }
 
+        protected override void Update() {
+            base.Update();
+            meleeManager.blockAttack -= Time.deltaTime;
+        }
+
         protected override void InputHandle()
         {
             if (cc == null || cc.isDead)
@@ -87,6 +92,7 @@ namespace Invector.vCharacterController
                 MeleeWeakAttackInput();
                 Skill1Input();
                 Skill2Input();
+                Skill3Input();
                 BlockingInput();
             }
             else
@@ -117,6 +123,15 @@ namespace Invector.vCharacterController
             cc.animator.SetTrigger(vAnimatorParameters.WeakAttack);
         }
 
+        public UnityEvent onSkill1;
+        public UnityEvent onSkill2;
+        public UnityEvent onSkill3;
+
+        protected virtual bool Skill1Conditions()
+        {
+            return (!meleeManager.CurrentActiveAttackWeapon || meleeManager.CurrentActiveAttackWeapon.useStrongAttack) && MeleeAttackStaminaConditions() && meleeManager.currentSkill1CD <= 0.01f && meleeManager.IsEquipWeapon();
+        }
+
         /// <summary>
         /// STRONG ATK INPUT
         /// </summary>
@@ -124,7 +139,7 @@ namespace Invector.vCharacterController
         {
             if (cc.animator == null) return;
 
-            if (skill1Input.GetButtonDown() && (!meleeManager.CurrentActiveAttackWeapon || meleeManager.CurrentActiveAttackWeapon.useStrongAttack) && MeleeAttackStaminaConditions() && meleeManager.currentSkill1CD <= 0.01f && meleeManager.IsEquipWeapon())
+            if (skill1Input.GetButtonDown() && Skill1Conditions())
             {
                 onSkill1.Invoke();
                 meleeManager.currentSkill1CD = meleeManager.skill1CD;
@@ -132,17 +147,10 @@ namespace Invector.vCharacterController
             }
         }
 
-        /// <summary>
-        /// Conditions to trigger the Roll animation & behavior
-        /// </summary>
-        /// <returns></returns>
         protected virtual bool Skill2Conditions()
         {
             return !cc.isRolling && !cc.customAction && cc.isGrounded && cc.currentStamina > cc.skill2Stamina && !cc.isJumping && meleeManager.currentSkill2CD <= 0.01f && meleeManager.IsEquipWeapon();
         }
-
-        public UnityEvent onSkill1;
-        public UnityEvent onSkill2;
 
         /// <summary>
         /// Input to trigger the Roll
@@ -153,7 +161,25 @@ namespace Invector.vCharacterController
             {
                 onSkill2.Invoke();
                 meleeManager.currentSkill2CD = meleeManager.skill2CD;
-                cc.Skill2();
+                TriggerSkill2();
+            }
+        }
+        
+        protected virtual bool Skill3Conditions()
+        {
+            return !cc.isRolling && !cc.customAction && cc.isGrounded && cc.currentStamina > cc.skill3Stamina && !cc.isJumping && meleeManager.currentSkill3CD <= 0.01f && meleeManager.IsEquipWeapon();
+        }
+
+        /// <summary>
+        /// Input to trigger the Roll
+        /// </summary>
+        protected virtual void Skill3Input()
+        {
+            if (skill3Input.GetButtonDown() && Skill3Conditions())
+            {
+                onSkill3.Invoke();
+                meleeManager.currentSkill3CD = meleeManager.skill3CD;
+                TriggerSkill3();
             }
         }
 
@@ -174,6 +200,28 @@ namespace Invector.vCharacterController
             cc.animator.SetInteger(vAnimatorParameters.AttackID, AttackID);
             cc.animator.SetTrigger(vAnimatorParameters.Skill1Attack);
         }
+
+        /// <summary>
+        /// 技能2
+        /// </summary>
+        public virtual void TriggerSkill2()
+        {
+            animator.CrossFadeInFixedTime("SariaSkill_02", 0.1f);
+            //ReduceStamina(skill2Stamina, false);
+            //currentStaminaRecoveryDelay = 6f;
+        }
+
+        /// <summary>
+        /// 技能3
+        /// </summary>
+        public virtual void TriggerSkill3()
+        {
+            animator.CrossFadeInFixedTime("SariaSkill_03", 0.1f);
+            GameObject skill = Instantiate(meleeManager.skill3Prefab,transform.position,transform.rotation);
+            skill.GetComponent<ParticleSystem>().Play();
+            //ReduceStamina(skill3Stamina, false);
+            //currentStaminaRecoveryDelay = 6f;
+        }
         /// <summary>
         /// BLOCK INPUT
         /// </summary>
@@ -182,6 +230,9 @@ namespace Invector.vCharacterController
             if (cc.animator == null) return;
 
             isBlocking = blockInput.GetButton() && cc.currentStamina > 0 && !cc.customAction && !isAttacking;
+            if (blockInput.GetButtonDown() && cc.currentStamina > 0 && !cc.customAction && !isAttacking) {
+                meleeManager.blockAttack = 0.15f;
+            }
         }
 
 

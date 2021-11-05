@@ -77409,7 +77409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 0
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -77472,6 +77472,7 @@ MonoBehaviour:
   jumpStamina: 10
   rollStamina: 25
   skill2Stamina: 60
+  skill3Stamina: 60
   OnJump:
     m_PersistentCalls:
       m_Calls: []
@@ -77856,6 +77857,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onSkill3:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &863648311291234592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77935,6 +77939,8 @@ MonoBehaviour:
   skill1CD: 2
   skill2CD: 3
   skill3CD: 4
+  skill3Prefab: {fileID: 7708059463879224228, guid: 2961dbdbf3f224c4bb6caa63f761cd27,
+    type: 3}
 --- !u!114 &863648311792002228
 MonoBehaviour:
   m_ObjectHideFlags: 0

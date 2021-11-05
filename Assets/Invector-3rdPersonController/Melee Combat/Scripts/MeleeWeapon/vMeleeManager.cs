@@ -41,6 +41,10 @@ namespace Invector.vMelee
         internal float currentSkill1CD;
         internal float currentSkill2CD;
         internal float currentSkill3CD;
+        internal bool isSkill;
+        public GameObject skill3Prefab;
+
+        internal float blockAttack;
 
         [HideInInspector]
         public vIMeleeFighter fighter;
@@ -182,7 +186,7 @@ namespace Invector.vMelee
         /// <param name="hitInfo"></param>
         public virtual void OnRecoilHit(vHitInfo hitInfo)
         {
-            if (hitProperties.useRecoil && InRecoilRange(hitInfo) && !inRecoil)
+            if (hitProperties.useRecoil && InRecoilRange(hitInfo) && !inRecoil && !isSkill)
             {
                 inRecoil = true;
                 var id = currentRecoilID;

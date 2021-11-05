@@ -100,11 +100,11 @@ namespace Invector
         {
             get
             {
-                return (currentHealth >= 0 && healthRecovery > 0 && currentHealth < maxHealth);
+                return (currentHealth >= 0 && healthRecovery != 0);
             }
         }
 
-        protected virtual IEnumerator RecoverHealth()
+        public virtual IEnumerator RecoverHealth()
         {
             inHealthRecovery = true;
             while (canRecoverHealth && !isDead)
@@ -122,10 +122,9 @@ namespace Invector
                 currentHealthRecoveryDelay -= Time.deltaTime;
             else
             {
+                currentHealth += healthRecovery * Time.deltaTime;
                 if (currentHealth > maxHealth)
                     currentHealth = maxHealth;
-                if (currentHealth < maxHealth)
-                    currentHealth += healthRecovery * Time.deltaTime;
             }
         }
 
@@ -224,7 +223,7 @@ namespace Invector
             {
                 events[i].OnCheckHealth.Invoke();
             }
-            if (currentHealth < maxHealth && this.gameObject.activeInHierarchy && !inHealthRecovery)
+            if (this.gameObject.activeInHierarchy && !inHealthRecovery)
                 StartCoroutine(RecoverHealth());
         }
 

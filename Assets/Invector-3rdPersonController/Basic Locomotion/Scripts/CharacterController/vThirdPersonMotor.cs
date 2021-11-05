@@ -19,6 +19,7 @@ namespace Invector.vCharacterController
         public float jumpStamina = 30f;
         public float rollStamina = 25f;
         public float skill2Stamina = 60f;
+        public float skill3Stamina = 60f;
 
         [vEditorToolbar("Events", order = 7)]
         public UnityEvent OnJump;
@@ -221,7 +222,6 @@ namespace Invector.vCharacterController
         internal bool
             isSiting,
             isRolling,
-            isSkill2,
             isJumping,
             isInAirborne,
             isTurningOnSpot,
@@ -418,6 +418,13 @@ namespace Invector.vCharacterController
 
         public override void TakeDamage(vDamage damage)
         {
+            vMelee.vMeleeManager meleeManager = GetComponent<vMelee.vMeleeManager>();
+            if (meleeManager != null) {
+                if (meleeManager.blockAttack > 0f) {
+                    Debug.Log("触发盾反");
+                    return;
+                }
+            }
             // don't apply damage if the character is rolling, you can add more conditions here
             if (currentHealth <= 0 || (IgnoreDamageRolling()))
             {

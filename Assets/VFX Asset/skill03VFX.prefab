@@ -9883,6 +9883,8 @@ GameObject:
   - component: {fileID: 7706781870414863882}
   - component: {fileID: 7513027690910530322}
   - component: {fileID: 7510237920204914134}
+  - component: {fileID: 7261946900293759868}
+  - component: {fileID: 1638539643920623000}
   m_Layer: 0
   m_Name: skill03VFX
   m_TagString: Untagged
@@ -14726,6 +14728,35 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!65 &7261946900293759868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7708059463879224228}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5, y: 0.5, z: 3.5}
+  m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!114 &1638539643920623000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7708059463879224228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403293fa06bef0440870546e51c5937f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDamage: 10
+  enemySlowDown: 0.5
+  playerHealthRecoverRate: 10
+  particleSystem: {fileID: 7513027690910530322}
 --- !u!1 &7708141727104395588
 GameObject:
   m_ObjectHideFlags: 0
