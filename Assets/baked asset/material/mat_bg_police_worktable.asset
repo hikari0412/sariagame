@@ -1,0 +1,292 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: mat_bg_police_worktable
+  m_EditorClassIdentifier: 
+  version: 3252
+  resultType: 0
+  materialsAndUVRects:
+  - material: {fileID: 2100000, guid: 4eef852ec22b6d44897aa63f540af02f, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.00048828125
+      y: 0.00048828125
+      width: 0.2548828
+      height: 0.49902344
+    srcObjName: TableWork (7)
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.018472318
+      y: 0.01
+      width: 0.9573915
+      height: 0.95597786
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: d3ef1f69927562541a1e4e511fad4a93, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.5126953
+      y: 0.95751953
+      width: 0.020019531
+      height: 0.03857422
+    srcObjName: StickerD
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.62146795
+      y: 0.8720859
+      width: 0.040583014
+      height: 0.03889036
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 48c02e5b4ba6dc046b4b49b47895f794, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.25634766
+      y: 0.5004883
+      width: 0.25048828
+      height: 0.48876953
+    srcObjName: PaperTray (12)
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.010579912
+      y: 0.010028197
+      width: 0.9793919
+      height: 0.97769624
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: d3ef1f69927562541a1e4e511fad4a93, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.7651367
+      y: 0.5004883
+      width: 0.055664062
+      height: 0.15527344
+    srcObjName: A4_Table (1)
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.49990046
+      y: 0.66411257
+      width: 0.10999328
+      height: 0.15556204
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: dd543cc6c944e214c81899edf1eef355, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.5126953
+      y: 0.48046875
+      width: 0.25097656
+      height: 0.47607422
+    srcObjName: PencilBox_filled
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.009080725
+      y: 0.008610594
+      width: 0.9824004
+      height: 0.95277345
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: bca215fc71d3a40479d6e7f2854f95d6, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.00048828125
+      y: 0.5004883
+      width: 0.2548828
+      height: 0.49902344
+    srcObjName: Pencil_White
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.017706703
+      y: 0.012789112
+      width: 0.97565913
+      height: 0.9791444
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 66880b92293867b4891d33b31e05d367, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.7651367
+      y: 0.00048828125
+      width: 0.234375
+      height: 0.49902344
+    srcObjName: Keyboard
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.5193698
+      y: 0.31381333
+      width: 0.45808238
+      height: 0.6772677
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 55c9b674b62922346a64e0e0a47fb014, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.25634766
+      y: 0.00048828125
+      width: 0.2553711
+      height: 0.49902344
+    srcObjName: SistemUnit (10)
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.009072036
+      y: 0.006431289
+      width: 0.98118186
+      height: 0.9806906
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: bb87719f3a85a4f4db0a44a5a8f68643, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.5126953
+      y: 0.00048828125
+      width: 0.25146484
+      height: 0.4790039
+    srcObjName: Lamp03
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.0098982565
+      y: 0.009898256
+      width: 0.98385984
+      height: 0.958185
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  resultMaterials:
+  - combinedMaterial: {fileID: 2100000, guid: 852896a34314f8a43bfa871c85f9f67a, type: 2}
+    considerMeshUVs: 1
+    sourceMaterials:
+    - {fileID: 2100000, guid: 4eef852ec22b6d44897aa63f540af02f, type: 2}
+    - {fileID: 2100000, guid: bca215fc71d3a40479d6e7f2854f95d6, type: 2}
+    - {fileID: 2100000, guid: d3ef1f69927562541a1e4e511fad4a93, type: 2}
+    - {fileID: 2100000, guid: 48c02e5b4ba6dc046b4b49b47895f794, type: 2}
+    - {fileID: 2100000, guid: 55c9b674b62922346a64e0e0a47fb014, type: 2}
+    - {fileID: 2100000, guid: dd543cc6c944e214c81899edf1eef355, type: 2}
+    - {fileID: 2100000, guid: 66880b92293867b4891d33b31e05d367, type: 2}
+    - {fileID: 2100000, guid: bb87719f3a85a4f4db0a44a5a8f68643, type: 2}
+  resultMaterialsTexArray: []
+  doMultiMaterial: 1
