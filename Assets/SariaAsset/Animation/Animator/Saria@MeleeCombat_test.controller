@@ -1464,7 +1464,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 403a18db30dc0d94db126f156c7f8d02, type: 3}
+  m_Motion: {fileID: 7400000, guid: 8faea6f79bda5cf4c9c6022ce6d122ac, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -29551,7 +29551,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5ad60c67b633d614d858a881284c0f7c, type: 3}
+  m_Motion: {fileID: 7400000, guid: 979420a678e4afa498ea8a94b59e473a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -40377,12 +40377,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventTriggers:
-  - eventName: Play Skill01 Effect
+  - eventName: Play Skill01 Effect1
     eventTriggerType: 0
     normalizedTime: 0.2
-  - eventName: Stop Skill01 Effect
+  - eventName: Stop Skill01 Effect1
     eventTriggerType: 0
     normalizedTime: 0.6
+  - eventName: Play Skill01 Effect2
+    eventTriggerType: 0
+    normalizedTime: 0.52
+  - eventName: Stop Skill01 Effect2
+    eventTriggerType: 0
+    normalizedTime: 0.8
 --- !u!1101 &1680012002411079457
 AnimatorStateTransition:
   m_ObjectHideFlags: 3

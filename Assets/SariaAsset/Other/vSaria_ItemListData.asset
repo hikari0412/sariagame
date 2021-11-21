@@ -78,7 +78,7 @@ MonoBehaviour:
     isOpen: 1
     isBool: 0
   - name: 2
-    value: 30
+    value: 20
     isOpen: 1
     isBool: 0
   isInEquipArea: 0
@@ -120,12 +120,12 @@ MonoBehaviour:
     type: 3}
   attributes:
   - name: 2
-    value: 30
+    value: 10
     isOpen: 1
     isBool: 0
   - name: 3
     value: 35
-    isOpen: 0
+    isOpen: 1
     isBool: 0
   - name: 4
     value: 60
