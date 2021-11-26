@@ -1083,14 +1083,14 @@ MonoBehaviour:
     normalizedTime: 0.43
   - eventName: change skill material
     eventTriggerType: 0
-    normalizedTime: 0
+    normalizedTime: 0.1
   - eventName: restore skill material
     eventTriggerType: 0
     normalizedTime: 0.9
   - eventName: Play Skill03 weapon animation
     eventTriggerType: 0
     normalizedTime: 0
-  - eventName: Stop Skill03 weapon animation
+  - eventName: 
     eventTriggerType: 0
     normalizedTime: 0.9
 --- !u!1109 &-4316468247377682407
@@ -1804,7 +1804,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 06390d72149248a449937eb5bcf3bbab, type: 2}
+  m_Motion: {fileID: 7400000, guid: f140099d8fd69bd4191e97027a25e38d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -17214,8 +17214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9058122f6ec699438581f28f117350d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDamage: 0.25
-  endDamage: 0.8
+  startDamage: 0.45
+  endDamage: 0.65
   damageMultiplier: 0
   recoilID: 1
   reactionID: 0
@@ -17223,7 +17223,7 @@ MonoBehaviour:
   damageType: 
   bodyParts:
   - RightLowerArm
-  ignoreDefense: 0
+  ignoreDefense: 1
   activeRagdoll: 0
   senselessTime: 0
   resetAttackTrigger: 1
@@ -37568,7 +37568,7 @@ AnimatorStateMachine:
     m_Position: {x: 260, y: -50, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107283282387385778}
-    m_Position: {x: 264, y: 0, z: 0}
+    m_Position: {x: 260, y: 0, z: 0}
   m_AnyStateTransitions: []
   m_EntryTransitions:
   - {fileID: 1109972910607089668}
@@ -41292,10 +41292,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventTriggers:
-  - eventName: Play Skill02 Effect
+  - eventName: Play Skill02 Effect1
     eventTriggerType: 0
     normalizedTime: 0.1
-  - eventName: Stop Skill02 Effect
+  - eventName: Stop Skill02 Effect1
     eventTriggerType: 0
     normalizedTime: 0.7
   - eventName: change skill material
@@ -41308,6 +41308,12 @@ MonoBehaviour:
     eventTriggerType: 0
     normalizedTime: 0
   - eventName: Stop Skill02 Damage
+    eventTriggerType: 0
+    normalizedTime: 0.9
+  - eventName: Play Skill02 Effect2
+    eventTriggerType: 0
+    normalizedTime: 0.35
+  - eventName: Stop Skill02 Effect2
     eventTriggerType: 0
     normalizedTime: 0.9
 --- !u!114 &6328522681764245504

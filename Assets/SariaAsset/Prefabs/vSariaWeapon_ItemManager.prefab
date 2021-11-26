@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 114000012368389690}
   - component: {fileID: 114000010972414964}
   - component: {fileID: 114378184476115406}
+  - component: {fileID: -617347763351414672}
   m_Layer: 2
   m_Name: vSariaWeapon_ItemManager
   m_TagString: Weapon
@@ -237,6 +238,58 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   referenceItem: {fileID: 0}
+--- !u!114 &-617347763351414672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010725870802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393a4106eb54f894a900c48422883d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openCloseEvents: 0
+  openCloseWindow: 1
+  selectedToolbar: 0
+  getAnimatorInParent: 1
+  animatorEvents:
+  - eventName: change weapon skill material
+    debug: 0
+    onTriggerEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8899393163750454474}
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: d37cb39a196d3cd43be6402a3cfaa8e2,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventName: restore weapon skill material
+    debug: 0
+    onTriggerEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8899393163750454474}
+          m_MethodName: set_material
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2100000, guid: 86f7ade32a757c446bc22a75767a50a0,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  removeEventsOnDisable: 0
 --- !u!1 &1000010770937418
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +463,12 @@ PrefabInstance:
 --- !u!4 &7767533098245115813 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f952a89f7b7707549a061f1bdc705778,
+    type: 3}
+  m_PrefabInstance: {fileID: 7800634019367888974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8899393163750454474 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: f952a89f7b7707549a061f1bdc705778,
     type: 3}
   m_PrefabInstance: {fileID: 7800634019367888974}
   m_PrefabAsset: {fileID: 0}
