@@ -8,7 +8,8 @@ public class Skill3 : MonoBehaviour
     public int enemyDamage;
     public float enemySlowDown;
     public int playerHealthRecoverRate;
-    public ParticleSystem particleSystem; 
+    public ParticleSystem particleSystem;
+    float currentTime;
     float oldAgentSpeed;
     
 
@@ -19,6 +20,7 @@ public class Skill3 : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        currentTime = 0f;
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             Invector.vHealthController HealthController = other.gameObject.GetComponent<Invector.vHealthController>();
@@ -36,8 +38,8 @@ public class Skill3 : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-
-        if (particleSystem.isStopped)
+        currentTime += Time.deltaTime;
+        if (currentTime > 25f)
         {
             OnTriggerExit(other);
         }

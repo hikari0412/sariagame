@@ -217,6 +217,12 @@ namespace Invector.vCharacterController
         public virtual void TriggerSkill3()
         {
             animator.CrossFadeInFixedTime("SariaSkill_03", 0.1f);
+        }
+        /// <summary>
+        /// 技能3
+        /// </summary>
+        public virtual void TriggerSkill3FX()
+        {
             GameObject skill = Instantiate(meleeManager.skill3Prefab,transform.position,transform.rotation);
             skill.GetComponent<ParticleSystem>().Play();
             //ReduceStamina(skill3Stamina, false);
