@@ -1081,10 +1081,10 @@ MonoBehaviour:
   - eventName: Play Skill03 Effect
     eventTriggerType: 0
     normalizedTime: 0.43
-  - eventName: change skill material
+  - eventName: change shield skill material
     eventTriggerType: 0
     normalizedTime: 0.1
-  - eventName: restore skill material
+  - eventName: restore shield skill material
     eventTriggerType: 0
     normalizedTime: 0.9
   - eventName: Play Skill03 weapon animation
@@ -17216,7 +17216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startDamage: 0.45
   endDamage: 0.65
-  damageMultiplier: 0
+  damageMultiplier: 2
   recoilID: 1
   reactionID: 0
   meleeAttackType: 1
@@ -40389,6 +40389,12 @@ MonoBehaviour:
   - eventName: Stop Skill01 Effect2
     eventTriggerType: 0
     normalizedTime: 0.8
+  - eventName: change weapon skill material
+    eventTriggerType: 0
+    normalizedTime: 0.1
+  - eventName: restore weapon skill material
+    eventTriggerType: 0
+    normalizedTime: 0.7
 --- !u!1101 &1680012002411079457
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -41298,10 +41304,10 @@ MonoBehaviour:
   - eventName: Stop Skill02 Effect1
     eventTriggerType: 0
     normalizedTime: 0.7
-  - eventName: change skill material
+  - eventName: change shield skill material
     eventTriggerType: 0
     normalizedTime: 0
-  - eventName: restore skill material
+  - eventName: restore shield skill material
     eventTriggerType: 0
     normalizedTime: 0.9
   - eventName: Start Skill02 Damage

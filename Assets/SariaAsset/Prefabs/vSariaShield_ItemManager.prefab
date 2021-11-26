@@ -170,7 +170,7 @@ MonoBehaviour:
   selectedToolbar: 0
   getAnimatorInParent: 1
   animatorEvents:
-  - eventName: change skill material
+  - eventName: change shield skill material
     debug: 0
     onTriggerEvent:
       m_PersistentCalls:
@@ -187,7 +187,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventName: restore skill material
+  - eventName: restore shield skill material
     debug: 0
     onTriggerEvent:
       m_PersistentCalls:
