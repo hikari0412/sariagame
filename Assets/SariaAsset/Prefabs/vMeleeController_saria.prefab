@@ -45805,10 +45805,10 @@ MonoBehaviour:
   m_Gravity: {x: 0, y: -0.02, z: 0}
   m_Force: {x: 0, y: 0, z: 0}
   m_Colliders:
-  - {fileID: 863648310480465854}
-  - {fileID: 6407972887603398970}
   - {fileID: 863648311546711687}
-  - {fileID: 5950304687354460523}
+  - {fileID: 6407972887603398970}
+  - {fileID: 0}
+  - {fileID: 0}
   m_Exclusions: []
   m_FreezeAxis: 0
   m_DistantDisable: 0
@@ -147832,10 +147832,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4691489805930801527, guid: 605ec66e9e8184a489221d949d48c898,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4691498705577939629, guid: 605ec66e9e8184a489221d949d48c898,
         type: 3}
       propertyPath: m_Name
       value: skill1_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691618549787505233, guid: 605ec66e9e8184a489221d949d48c898,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4691701882049428949, guid: 605ec66e9e8184a489221d949d48c898,
         type: 3}
@@ -148047,6 +148057,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: skill2-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 489986061715592881, guid: 7cac314fe98113248b1df7917e3a7e10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490428661921860623, guid: 7cac314fe98113248b1df7917e3a7e10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 493388134240071013, guid: 7cac314fe98113248b1df7917e3a7e10,
         type: 3}
