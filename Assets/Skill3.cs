@@ -56,6 +56,7 @@ public class Skill3 : MonoBehaviour
         {
             Invector.vHealthController HealthController = other.gameObject.GetComponent<Invector.vHealthController>();
             HealthController.healthRecovery = 0f;
+            HealthController.inHealthRecovery = false; //协程有bug 连续释放会无法回血
         }
     }
 }
