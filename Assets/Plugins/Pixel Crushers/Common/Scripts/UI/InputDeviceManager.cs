@@ -408,11 +408,11 @@ namespace PixelCrushers
         }
 
         public void ForceCursor(bool visible)
-        {
+        {/* 已禁止 巴卡巴卡
             Cursor.visible = visible;
             Cursor.lockState = visible ? CursorLockMode.None : CursorLockMode.Locked;
             m_lastMousePosition = GetMousePosition();
-            StartCoroutine(ForceCursorAfterOneFrameCoroutine(visible));
+            StartCoroutine(ForceCursorAfterOneFrameCoroutine(visible));*/
         }
 
         private IEnumerator ForceCursorAfterOneFrameCoroutine(bool visible)
