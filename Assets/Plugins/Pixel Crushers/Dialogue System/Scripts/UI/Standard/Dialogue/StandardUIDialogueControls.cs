@@ -1,4 +1,4 @@
-// Copyright (c) Pixel Crushers. All rights reserved.
+﻿// Copyright (c) Pixel Crushers. All rights reserved.
 
 using System;
 using System.Collections;
@@ -80,6 +80,8 @@ namespace PixelCrushers.DialogueSystem
 
         public override void ShowPanel()
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             if (closeCoroutine != null)
             {
                 mainPanel.StopCoroutine(closeCoroutine);
@@ -92,6 +94,9 @@ namespace PixelCrushers.DialogueSystem
 
         private void HidePanel()
         {
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             if (!m_initializedAnimator || (mainPanel != null && !mainPanel.gameObject.activeSelf))
             {
                 HideImmediate();
