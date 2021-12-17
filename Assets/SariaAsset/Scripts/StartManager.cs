@@ -5,8 +5,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class StartManager : MonoBehaviour
 {
+    public GameObject loading;
     public void StartGame() {
-        SceneManager.LoadScene("Saria_Main Scene");
+        loading.SetActive(true);
+        SceneManager.LoadSceneAsync("Saria_Main Scene");
     }
     public void EndGame() {
         #if UNITY_EDITOR
