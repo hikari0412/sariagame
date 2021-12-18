@@ -80,10 +80,6 @@ namespace PixelCrushers.DialogueSystem
 
         public override void ShowPanel()
         {
-            if (WoliekaileManage.instance && WoliekaileManage.instance.player) { 
-                WoliekaileManage.instance.player.animator.Play("Speak");
-                WoliekaileManage.instance.player.animator.SetBool("IsSpeak",true);
-            }
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             if (closeCoroutine != null)
@@ -98,10 +94,6 @@ namespace PixelCrushers.DialogueSystem
 
         private void HidePanel()
         {
-            if (WoliekaileManage.instance && WoliekaileManage.instance.player)
-            {
-                WoliekaileManage.instance.player.animator.SetBool("IsSpeak", false);
-            }
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             if (!m_initializedAnimator || (mainPanel != null && !mainPanel.gameObject.activeSelf))

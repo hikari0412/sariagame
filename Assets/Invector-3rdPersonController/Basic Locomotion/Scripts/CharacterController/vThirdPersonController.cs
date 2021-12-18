@@ -5,11 +5,6 @@ namespace Invector.vCharacterController
     [vClassHeader("THIRD PERSON CONTROLLER", iconName = "controllerIcon")]
     public class vThirdPersonController : vThirdPersonAnimator
     {
-        protected override void Start()
-        {
-            base.Start();
-            WoliekaileManage.instance.player = this;
-        }
 
         /// <summary>
         /// Move the controller to a specific Position
