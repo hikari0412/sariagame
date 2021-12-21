@@ -406,7 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 1
   item: {fileID: 0}
   isValid: 1
   isChecked: 0
@@ -464,7 +464,10 @@ MonoBehaviour:
   onDisable:
     m_PersistentCalls:
       m_Calls: []
-  onClick:
+  onLeftClick:
+    m_PersistentCalls:
+      m_Calls: []
+  onRightClick:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1000012323760644
