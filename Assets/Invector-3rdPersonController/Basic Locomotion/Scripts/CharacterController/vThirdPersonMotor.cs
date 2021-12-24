@@ -422,6 +422,7 @@ namespace Invector.vCharacterController
             if (meleeManager != null) {
                 if (meleeManager.blockAttack > 0f) {
                     Debug.Log("触发盾反");
+                    animator.Play("parry");
                     return;
                 }
             }
