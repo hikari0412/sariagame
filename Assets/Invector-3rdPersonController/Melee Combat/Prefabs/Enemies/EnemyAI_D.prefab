@@ -2202,6 +2202,8 @@ MonoBehaviour:
       m_Bits: 1
   leftWeapon: {fileID: 0}
   rightWeapon: {fileID: 0}
+  currentLeftWeapon: {fileID: 0}
+  currentRightWeapon: {fileID: 0}
   onDamageHit:
     m_PersistentCalls:
       m_Calls: []
@@ -2216,6 +2218,10 @@ MonoBehaviour:
   defaultStaminaRecoveryDelay: 1
   defaultDefenseRate: 50
   defaultDefenseRange: 90
+  skill1CD: 0
+  skill2CD: 0
+  skill3CD: 0
+  skill3Prefab: {fileID: 0}
 --- !u!114 &114000014116064030
 MonoBehaviour:
   m_ObjectHideFlags: 0
