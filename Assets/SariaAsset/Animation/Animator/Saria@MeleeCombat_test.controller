@@ -1055,7 +1055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDamage: 0.05
-  endDamage: 0.9
+  endDamage: 0.5
   damageMultiplier: 0
   recoilID: 0
   reactionID: 0
@@ -1438,6 +1438,28 @@ BlendTree:
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0
+--- !u!1101 &-3016323724989815539
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 0}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 1
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.79452056
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-2853722506574805984
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -19391,7 +19413,7 @@ BlendTree:
   m_Name: Walking
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400004, guid: 12e47c51ad139a64ab80bb5d185aeb96, type: 3}
+    m_Motion: {fileID: 7400000, guid: 8166c80832c376b439aa99e83a916dae, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0.5}
     m_TimeScale: 1.5
@@ -19399,7 +19421,7 @@ BlendTree:
     m_DirectBlendParameter: InputHorizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400002, guid: 12e47c51ad139a64ab80bb5d185aeb96, type: 3}
+    m_Motion: {fileID: 7400000, guid: e87ecef0aac6649498e1b018f980acfd, type: 2}
     m_Threshold: 0.33333334
     m_Position: {x: 0, y: -0.5}
     m_TimeScale: 1.5
@@ -19407,7 +19429,7 @@ BlendTree:
     m_DirectBlendParameter: InputHorizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400006, guid: 12e47c51ad139a64ab80bb5d185aeb96, type: 3}
+    m_Motion: {fileID: 7400000, guid: c7dab2e005b6cbf4babd64ebfc8a98ef, type: 2}
     m_Threshold: 0.6666667
     m_Position: {x: -0.5, y: 0}
     m_TimeScale: 1.5
@@ -19415,7 +19437,7 @@ BlendTree:
     m_DirectBlendParameter: InputHorizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400008, guid: 12e47c51ad139a64ab80bb5d185aeb96, type: 3}
+    m_Motion: {fileID: 7400000, guid: e42ea28eb0d3b92478ff5fe7d455a377, type: 2}
     m_Threshold: 1
     m_Position: {x: 0.5, y: 0}
     m_TimeScale: 1.5
@@ -20362,7 +20384,7 @@ BlendTree:
   m_Name: Holding Melee Weapon
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 12e47c51ad139a64ab80bb5d185aeb96, type: 3}
+    m_Motion: {fileID: 7400000, guid: 46b36a9f8194f244787485543157ee29, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -40483,7 +40505,7 @@ MonoBehaviour:
     normalizedTime: 0
   - eventName: restore shield skill material
     eventTriggerType: 0
-    normalizedTime: 1
+    normalizedTime: 0.7
 --- !u!1109 &1447228295061026777
 AnimatorTransition:
   m_ObjectHideFlags: 1
@@ -41622,7 +41644,8 @@ AnimatorState:
   m_Name: parry
   m_Speed: 1.2
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: -3016323724989815539}
   m_StateMachineBehaviours:
   - {fileID: 7290488028415620388}
   - {fileID: -4708825116747134947}
@@ -41636,7 +41659,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 718425020e2e96b4285d9fd09b181c1f, type: 3}
+  m_Motion: {fileID: 7400000, guid: 09f156be2eeda504fbd241b422018273, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

@@ -2635,7 +2635,7 @@ MonoBehaviour:
   minStrafeSwape: 2
   maxStrafeSwape: 5
   strafeRotationSpeed: 1
-  currentState: 0
+  currentState: 3
   sphereSensor: {fileID: 286235469702750879}
   tagsToDetect:
     tags:

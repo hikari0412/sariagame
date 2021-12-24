@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GeneralStates:
     LoadedProjectGUID:
-      valueInternal: 
+      valueInternal: 44a3159ab99872342ad79dc19601529e
     RecentlyOpenedProjectPath:
       valueInternal: Assets\SariaAsset\Animation\chara Animation Clip
     RecentlyOpenedProjectGUIDsList:

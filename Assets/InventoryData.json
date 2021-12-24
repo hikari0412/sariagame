@@ -14,6 +14,36 @@
         },
         {
             "amount": 1,
+            "id": 13,
+            "attributes": [
+                {
+                    "name": 2,
+                    "value": 10,
+                    "isOpen": true,
+                    "isBool": false
+                },
+                {
+                    "name": 3,
+                    "value": 35,
+                    "isOpen": true,
+                    "isBool": false
+                },
+                {
+                    "name": 4,
+                    "value": 60,
+                    "isOpen": false,
+                    "isBool": false
+                },
+                {
+                    "name": 5,
+                    "value": 85,
+                    "isOpen": false,
+                    "isBool": false
+                }
+            ]
+        },
+        {
+            "amount": 1,
             "id": 14,
             "attributes": [
                 {
@@ -44,36 +74,6 @@
         },
         {
             "amount": 1,
-            "id": 13,
-            "attributes": [
-                {
-                    "name": 2,
-                    "value": 30,
-                    "isOpen": true,
-                    "isBool": false
-                },
-                {
-                    "name": 3,
-                    "value": 35,
-                    "isOpen": false,
-                    "isBool": false
-                },
-                {
-                    "name": 4,
-                    "value": 60,
-                    "isOpen": false,
-                    "isBool": false
-                },
-                {
-                    "name": 5,
-                    "value": 85,
-                    "isOpen": false,
-                    "isBool": false
-                }
-            ]
-        },
-        {
-            "amount": 1,
             "id": 16,
             "attributes": [
                 {
@@ -90,7 +90,7 @@
             "slotsData": [
                 {
                     "hasItem": true,
-                    "indexOfItem": 2
+                    "indexOfItem": 1
                 },
                 {
                     "hasItem": false,
@@ -107,7 +107,7 @@
             "slotsData": [
                 {
                     "hasItem": true,
-                    "indexOfItem": 1
+                    "indexOfItem": 2
                 },
                 {
                     "hasItem": false,
