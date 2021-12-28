@@ -40,7 +40,7 @@ MonoBehaviour:
     - title: Name
       value: Player
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -48,7 +48,7 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: IsPlayer
       value: True
       type: 2
@@ -56,7 +56,7 @@ MonoBehaviour:
     - title: Display Name
       value: "\u585E\u96F7\u5A05"
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -66,7 +66,7 @@ MonoBehaviour:
     - title: Name
       value: Police1
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -74,7 +74,7 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: IsPlayer
       value: False
       type: 2
@@ -82,7 +82,7 @@ MonoBehaviour:
     - title: Display Name
       value: "\u72F1\u8B661"
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -1538,7 +1538,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: None()
+        value: "Delay(1.5);\nCamera(CamPos1,,0);\n{{default}}; \r\nMoveTo(RootPos1);\nAnimatorPlay(idle)"
         type: 0
         typeString: 
       - title: zh
@@ -1570,8 +1570,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 20
+        x: 32
+        y: 16
         width: 160
         height: 30
     - id: 1
@@ -1579,11 +1579,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
@@ -1595,15 +1595,15 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u55EF\uFF1F\u6211\u8BB0\u5F97\u4F60\u662F\u524D\u4E0D\u4E45\u65B0\u6765\u7684\u2026\u2026\uFF0C[var=Actor]\uFF0C\u5BF9\u5427\uFF1F"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
-        value: Camera(CamPos1,,0)
+        value: "{{default}}; \nAnimatorPlay(speaking);\nAnimatorPlay(idle,listener)"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: zh
         value: 
         type: 4
@@ -1633,8 +1633,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 29
-        y: 75
+        x: 32
+        y: 79
         width: 160
         height: 30
     - id: 2
@@ -1664,7 +1664,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "{{default}}; \nAnimatorPlay(speaking);\nAnimatorPlay(idle,listener)"
         type: 0
         typeString: 
       - title: zh
@@ -1696,7 +1696,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28
+        x: 29
         y: 176
         width: 160
         height: 30
@@ -1727,7 +1727,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "{{default}}; \nAnimatorPlay(speaking);\nAnimatorPlay(idle,listener)"
         type: 0
         typeString: 
       - title: zh
@@ -1749,7 +1749,7 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 3
         destinationConversationID: 3
-        destinationDialogueID: 5
+        destinationDialogueID: 6
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1759,8 +1759,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 26
-        y: 229
+        x: 29
+        y: 230
         width: 160
         height: 30
     - id: 4
@@ -1790,7 +1790,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: "{{default}}; \nAnimatorPlay(speaking);\nAnimatorPlay(idle,listener)"
         type: 0
         typeString: 
       - title: zh
@@ -1822,8 +1822,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28
-        y: 125
+        x: 27
+        y: 126
         width: 160
         height: 30
     - id: 5
@@ -1853,7 +1853,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: '{{default}};
+
+          AnimatorPlay(idle,listener);
+
+          AnimatorPlay(Free
+          Locomotion)'
         type: 0
         typeString: 
       - title: zh
@@ -1864,6 +1869,10 @@ MonoBehaviour:
         value: 
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: 
       conversationID: 3
       isRoot: 0
       isGroup: 0
@@ -1879,8 +1888,72 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 26
-        y: 279
+        x: 25
+        y: 344
+        width: 160
+        height: 30
+    - id: 6
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\u8FD9\u662FA\u533A\u7684\u6743\u9650\u5361\u3002"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: "{{default}}; \nAnimatorPlay(speaking);\nAnimatorPlay(idle,listener);\nSetActive(get
+          item test,true)"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: zh
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: ja
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 6
+        destinationConversationID: 3
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 29
+        y: 286
         width: 160
         height: 30
     entryGroups: []

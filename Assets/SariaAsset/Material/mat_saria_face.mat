@@ -158,7 +158,7 @@ Material:
     m_Floats:
     - Vector1_2EE2CB80: 0.1
     - _1st2nd_Shades_Feather: 0.0001
-    - _1st_ShadeColor_Feather: 0.1
+    - _1st_ShadeColor_Feather: 0.05
     - _1st_ShadeColor_Step: 0.4
     - _2nd_ShadeColor_Feather: 0.0001
     - _2nd_ShadeColor_Step: 0
@@ -170,9 +170,9 @@ Material:
     - _AngelRing: 0
     - _Ap_RimLight_FeatherOff: 0
     - _Ap_RimLight_Power: 0.1
-    - _AutoRenderQueue: 1
+    - _AutoRenderQueue: 0
     - _BaseColor_Step: 0.4
-    - _BaseShade_Feather: 0.1
+    - _BaseShade_Feather: 0.05
     - _Base_Speed: 0
     - _Blend: 0
     - _BlurLevelMatcap: 0
@@ -292,7 +292,7 @@ Material:
     - Color_A2AAE5B5: {r: 0.11372546, g: 0.62745106, b: 0.8352941, a: 0}
     - Vector2_C848BFFB: {r: 0.25, g: 0.25, b: 0, a: 0}
     - _1st_ShadeColor: {r: 0.9056604, g: 0.8415806, b: 0.8415806, a: 1}
-    - _2nd_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _2nd_ShadeColor: {r: 0.7830189, g: 0.71284264, b: 0.71284264, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
