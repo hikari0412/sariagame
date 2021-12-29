@@ -31,9 +31,11 @@ public class Skill3 : MonoBehaviour
         else if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Invector.vHealthController HealthController = other.gameObject.GetComponent<Invector.vHealthController>();
-            HealthController.healthRecovery = playerHealthRecoverRate;
+            if (HealthController != null) {
+                HealthController.healthRecovery = playerHealthRecoverRate;
                 if (this.gameObject.activeInHierarchy && !HealthController.inHealthRecovery)
                     StartCoroutine(HealthController.RecoverHealth());
+            }
         }
     }
     private void OnTriggerStay(Collider other)
@@ -55,8 +57,11 @@ public class Skill3 : MonoBehaviour
         else if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Invector.vHealthController HealthController = other.gameObject.GetComponent<Invector.vHealthController>();
-            HealthController.healthRecovery = 0f;
-            HealthController.inHealthRecovery = false; //协程有bug 连续释放会无法回血
+            if (HealthController != null)
+            {
+                HealthController.healthRecovery = 0f;
+                HealthController.inHealthRecovery = false; //协程有bug 连续释放会无法回血
+            }
         }
     }
 }
