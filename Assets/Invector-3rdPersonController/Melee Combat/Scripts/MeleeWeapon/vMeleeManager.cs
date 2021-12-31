@@ -46,6 +46,11 @@ namespace Invector.vMelee
 
         internal float blockAttack;
 
+        internal bool exMode;
+        internal float exModeTimer;
+        internal float exPoint;
+        internal float exDamage;
+
         [HideInInspector]
         public vIMeleeFighter fighter;
         private int damageMultiplier;
@@ -60,6 +65,27 @@ namespace Invector.vMelee
         protected virtual void Start()
         {
             Init();
+        }
+        private void Update()
+        {
+            if (gameObject.CompareTag("Player")) { 
+                if (exPoint >= 1)
+                {
+                    exMode = true;
+                    exModeTimer = 20f;
+                    exPoint = 0;
+                    GetComponent<Animator>().SetBool("ExMode", exMode);
+                }
+                exModeTimer -= Time.deltaTime;
+                if (exModeTimer <= 0)
+                {
+                    exMode = false;
+                    GetComponent<Animator>().SetBool("ExMode", exMode);
+                }
+                else {
+                    GetComponent<vDrawHideMeleeWeapons>().ForceHideWeapons();
+                }
+            }
         }
 
         /// <summary>
@@ -174,7 +200,14 @@ namespace Invector.vMelee
             /// Calc damage with multiplier 
             /// and Call ApplyDamage of attackObject 
             
-            damage.damageValue *= damageMultiplier > 1 ? damageMultiplier : 1;            
+            damage.damageValue *= damageMultiplier > 1 ? damageMultiplier : 1;
+            if (gameObject.CompareTag("Player")) { 
+                exDamage += damage.damageValue;
+                while (exDamage > 40) {
+                    exDamage -= 40;
+                    exPoint++;
+                }
+            }
             hitInfo.targetIsBlocking = !hitInfo.attackObject.ApplyDamage(hitInfo.hitBox, hitInfo.targetCollider, damage);
 
             onDamageHit.Invoke(hitInfo);            

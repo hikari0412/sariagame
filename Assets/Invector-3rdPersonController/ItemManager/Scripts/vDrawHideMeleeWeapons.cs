@@ -211,7 +211,7 @@ namespace Invector
 
         protected virtual void HandleInput()
         {
-            if (hideAndDrawWeaponsInput.GetButtonDown() && !IsEquipping)
+            if (hideAndDrawWeaponsInput.GetButtonDown() && !IsEquipping && !GetComponent<Invector.vMelee.vMeleeManager>().exMode)
             {
                 if (CanHideRightWeapon() || CanHideLeftWeapon())
                     HideWeapons();
