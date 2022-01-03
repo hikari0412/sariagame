@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: saria_calcification
+    second: {fileID: 2100000, guid: 3c6b2fdd4cd03ab42a48f74f5e0113e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: saria_cloth
     second: {fileID: 2100000, guid: acd6ef75608053e419a9542136f640c8, type: 2}
   - first:
