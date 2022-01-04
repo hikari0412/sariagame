@@ -1,7 +1,7 @@
 {
     "itemReferences": [
         {
-            "amount": 5,
+            "amount": 4,
             "id": 15,
             "attributes": [
                 {
@@ -71,18 +71,6 @@
                     "isBool": false
                 }
             ]
-        },
-        {
-            "amount": 1,
-            "id": 16,
-            "attributes": [
-                {
-                    "name": 0,
-                    "value": 80,
-                    "isOpen": true,
-                    "isBool": false
-                }
-            ]
         }
     ],
     "equipAreas": [
@@ -127,8 +115,8 @@
                     "indexOfItem": 0
                 },
                 {
-                    "hasItem": true,
-                    "indexOfItem": 3
+                    "hasItem": false,
+                    "indexOfItem": 0
                 },
                 {
                     "hasItem": false,
