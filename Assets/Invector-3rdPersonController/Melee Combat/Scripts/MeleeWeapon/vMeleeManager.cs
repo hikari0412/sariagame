@@ -52,7 +52,7 @@ namespace Invector.vMelee
         public ParticleSystem exModeStayEffect;
         internal bool exMode;
         internal float exModeTimer;
-        internal float exPoint;
+        public float exPoint;
         internal float exDamage;
         
 
