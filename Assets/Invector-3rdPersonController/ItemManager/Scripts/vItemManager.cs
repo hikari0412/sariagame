@@ -1055,7 +1055,6 @@ namespace Invector.vItemManager
             }
             return item.canBeUsed;
         }
-
         /// <summary>
         /// Use a specific Item - Called internally on a Event from the Inventory
         /// </summary>
@@ -1078,7 +1077,10 @@ namespace Invector.vItemManager
         /// <param name="item"></param>      
         protected IEnumerator UseItemRoutine(vItem item)
         {
-            usingItem = true;
+            if (item.id == 15 || item.id == 16) {
+                animator.Play("use sanityrest");
+            }
+                usingItem = true;
             LockInventoryInput(true);
             onStartItemUsage.Invoke(item);
             var canUse = CanUseItem(item);
