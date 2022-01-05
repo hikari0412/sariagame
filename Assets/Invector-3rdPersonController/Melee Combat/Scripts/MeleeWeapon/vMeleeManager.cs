@@ -46,10 +46,15 @@ namespace Invector.vMelee
 
         internal float blockAttack;
 
+        public float maxEX = 20f;
+        public GameObject exModeMesh;
+        public ParticleSystem exModeEnterEffect;
+        public ParticleSystem exModeStayEffect;
         internal bool exMode;
         internal float exModeTimer;
         internal float exPoint;
         internal float exDamage;
+        
 
         [HideInInspector]
         public vIMeleeFighter fighter;
@@ -69,20 +74,20 @@ namespace Invector.vMelee
         private void Update()
         {
             if (gameObject.CompareTag("Player")) { 
-                if (exPoint >= 1)
-                {
-                    exMode = true;
-                    exModeTimer = 20f;
-                    exPoint = 0;
-                    GetComponent<Animator>().SetBool("ExMode", exMode);
-                }
                 exModeTimer -= Time.deltaTime;
                 if (exModeTimer <= 0)
                 {
                     exMode = false;
+                    if (exModeEnterEffect.gameObject.activeSelf) 
+                        exModeStayEffect.gameObject.SetActive(false);
                     GetComponent<Animator>().SetBool("ExMode", exMode);
                 }
                 else {
+                    exPoint = exModeTimer;
+                    if (exModeEnterEffect.time>0.5f && !exModeStayEffect.isPlaying) {
+                        exModeStayEffect.gameObject.SetActive(true);
+                        exModeStayEffect.Play() ;
+                    }
                     GetComponent<vDrawHideMeleeWeapons>().ForceHideWeapons();
                 }
             }

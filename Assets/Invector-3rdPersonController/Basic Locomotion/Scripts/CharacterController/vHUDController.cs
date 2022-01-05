@@ -11,6 +11,7 @@ namespace Invector.vCharacterController
         [Header("Health/Stamina")]
         public Slider healthSlider;
         public Slider staminaSlider;
+        public Slider exModeSlider;
         [Header("DamageHUD")]
         public Image damageImage;
         public float flashSpeed = 5f;
@@ -44,6 +45,7 @@ namespace Invector.vCharacterController
 
         #endregion
 
+        private Invector.vMelee.vMeleeManager meleeManager;
         private static vHUDController _instance;
         public static vHUDController instance
         {
@@ -68,6 +70,7 @@ namespace Invector.vCharacterController
 
         public void Init(vThirdPersonController cc)
         {
+            meleeManager = cc.GetComponent<Invector.vMelee.vMeleeManager>();
             cc.onDead.AddListener(OnDead);
             cc.onReceiveDamage.AddListener(EnableDamageSprite);
             damageImage.color = new Color(0f, 0f, 0f, 0f);
@@ -83,6 +86,12 @@ namespace Invector.vCharacterController
                 staminaSlider.onValueChanged.Invoke(staminaSlider.value);
             }
             staminaSlider.value = cc.currentStamina;
+            if (meleeManager.maxEX != exModeSlider.maxValue)
+            {
+                exModeSlider.maxValue = meleeManager.maxEX;
+                exModeSlider.onValueChanged.Invoke(exModeSlider.value);
+            }
+            exModeSlider.value = meleeManager.exPoint;
         }
 
         private void OnDead(GameObject arg0)
@@ -155,6 +164,12 @@ namespace Invector.vCharacterController
                 staminaSlider.onValueChanged.Invoke(staminaSlider.value);
             }
             staminaSlider.value = cc.currentStamina;
+            if (meleeManager.maxEX != exModeSlider.maxValue)
+            {
+                exModeSlider.maxValue = Mathf.Lerp(exModeSlider.maxValue, meleeManager.maxEX, 2f * Time.fixedDeltaTime);
+                exModeSlider.onValueChanged.Invoke(exModeSlider.value);
+            }
+            exModeSlider.value = meleeManager.exPoint;
         }
 
         public void ShowDamageSprite()

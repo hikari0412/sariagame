@@ -20,6 +20,7 @@ namespace Invector.vCharacterController
         public GenericInput skill1Input = new GenericInput("Alpha1", false, "RT", true, "RT", false);   // 急救输出版
         public GenericInput skill2Input = new GenericInput("Alpha2", "", "");                           // 药物配置输出版
         public GenericInput skill3Input = new GenericInput("Alpha3", "", "");                           // 钙质化
+        public GenericInput exModeInput = new GenericInput("Alpha4", "", "");                           // 钙质化
         public GenericInput blockInput = new GenericInput("Mouse1", "LB", "LB");        
 
         internal vMeleeManager meleeManager;
@@ -93,6 +94,7 @@ namespace Invector.vCharacterController
                 Skill1Input();
                 Skill2Input();
                 Skill3Input();
+                ExModeInput();
                 BlockingInput();
             }
             else
@@ -126,6 +128,7 @@ namespace Invector.vCharacterController
         public UnityEvent onSkill1;
         public UnityEvent onSkill2;
         public UnityEvent onSkill3;
+        public UnityEvent onExMode;
 
         protected virtual bool Skill1Conditions()
         {
@@ -182,6 +185,23 @@ namespace Invector.vCharacterController
                 TriggerSkill3();
             }
         }
+        
+        protected virtual bool ExModeConditions()
+        {
+            return !cc.isRolling && !cc.customAction && cc.isGrounded && meleeManager.exPoint >= meleeManager.maxEX && !cc.isJumping;
+        }
+
+        /// <summary>
+        /// Input to trigger the Roll
+        /// </summary>
+        protected virtual void ExModeInput()
+        {
+            if (exModeInput.GetButtonDown() && ExModeConditions())
+            {
+                onExMode.Invoke();
+                TriggerExMode();
+            }
+        }
 
         /// <summary>
         /// Override the Sprint method to cancel Sprinting when Attacking
@@ -217,6 +237,20 @@ namespace Invector.vCharacterController
         public virtual void TriggerSkill3()
         {
             animator.CrossFadeInFixedTime("SariaSkill_03", 0.1f);
+        }
+
+        /// <summary>
+        /// ex模式
+        /// </summary>
+        public virtual void TriggerExMode()
+        {
+            meleeManager.exMode = true;
+            meleeManager.exModeTimer = meleeManager.maxEX;
+            meleeManager.exModeMesh.SetActive(true);
+            meleeManager.exModeEnterEffect.GetComponent<ParticleSystem>().Play();
+            animator.SetBool("ExMode", meleeManager.exMode);
+            animator.Play("into ex");
+
         }
         /// <summary>
         /// 技能3
