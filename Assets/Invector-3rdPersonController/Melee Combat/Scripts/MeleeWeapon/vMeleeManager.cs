@@ -80,6 +80,8 @@ namespace Invector.vMelee
                     exMode = false;
                     if (exModeEnterEffect.gameObject.activeSelf) 
                         exModeStayEffect.gameObject.SetActive(false);
+                    if (exModeMesh.activeSelf)
+                        exModeMesh.SetActive(false);
                     GetComponent<Animator>().SetBool("ExMode", exMode);
                 }
                 else {
@@ -208,8 +210,8 @@ namespace Invector.vMelee
             damage.damageValue *= damageMultiplier > 1 ? damageMultiplier : 1;
             if (gameObject.CompareTag("Player")) { 
                 exDamage += damage.damageValue;
-                while (exDamage > 40) {
-                    exDamage -= 40;
+                while (exDamage > 1) {
+                    exDamage -= 1;
                     exPoint++;
                 }
             }
