@@ -156,7 +156,7 @@ MonoBehaviour:
     type: 3}
   attributes:
   - name: 2
-    value: 10
+    value: 80
     isOpen: 1
     isBool: 0
   - name: 3
