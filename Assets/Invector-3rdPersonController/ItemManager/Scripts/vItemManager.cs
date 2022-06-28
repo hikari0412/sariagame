@@ -1354,7 +1354,7 @@ namespace Invector.vItemManager
                 var item = itemListData.items.Find(_item => _item.id == collection[i].id);
                 if (item != null && vItemCollectionDisplay.Instance != null)
                 {
-                    vItemCollectionDisplay.Instance.FadeText("Acquired:" + " " + collection[i].amount + " " + item.name, 4, 0.25f);
+                    vItemCollectionDisplay.Instance.FadeText("获得:" + " " + collection[i].amount + " " + item.name, 4, 0.25f);
                 }
                 while (collection[i].addToEquipArea && (inEquip || IsAnimatorTag("IsEquipping")))
                 {

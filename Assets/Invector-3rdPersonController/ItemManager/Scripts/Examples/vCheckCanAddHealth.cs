@@ -61,7 +61,7 @@ namespace Invector.vItemManager
                     canUse = valid;
                     firstRun = true;
                     // trigger a custom text if there is a HUDController in the scene
-                    vHUDController.instance.ShowText(valid ? "Increase health" : "Can't use " + item.name + " because your health is full", 4f);
+                    vHUDController.instance.ShowText(valid ? "Increase health" : "HP已满，无法使用" + item.name , 4f);
                 }
                 
                 if (!valid)

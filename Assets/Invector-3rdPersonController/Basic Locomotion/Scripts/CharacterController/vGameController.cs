@@ -49,7 +49,7 @@ namespace Invector
             SceneManager.sceneLoaded += OnLevelFinishedLoading;
             if (displayInfoInFadeText && vHUDController.instance)
             {
-                vHUDController.instance.ShowText("Init Scene");
+                vHUDController.instance.ShowText("进入场景");
             }
 
             FindPlayer();
@@ -147,7 +147,7 @@ namespace Invector
                 player.onDead.AddListener(OnCharacterDead);
                 if (displayInfoInFadeText && vHUDController.instance)
                 {
-                    vHUDController.instance.ShowText("Found player: " + currentPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
+                    vHUDController.instance.ShowText("用户: " + currentPlayer.name.Replace("(Clone)", "").Replace("Instance", ""));
                 }
             }
             else if (currentPlayer == null && playerPrefab != null && spawnPoint != null)
