@@ -143,7 +143,7 @@ MonoBehaviour:
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
-      value: unassigned
+      value: active
       type: 0
       typeString: 
     - title: Entry 1
@@ -1235,8 +1235,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 270
+        x: 31.176468
+        y: 271.17648
         width: 160
         height: 30
     - id: 6
@@ -1550,7 +1550,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.73000026
   - id: 3
     fields:
     - title: Title
@@ -1656,12 +1656,6 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 0
         destinationConversationID: 3
-        destinationDialogueID: 8
-        isConnector: 0
-        priority: 2
-      - originConversationID: 3
-        originDialogueID: 0
-        destinationConversationID: 3
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
@@ -1728,7 +1722,7 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("Q1KillWorkshopEnemy") == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -1854,7 +1848,7 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Q1KillWorkshopEnemy") == "unassigned"
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -1984,7 +1978,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("Q1KillWorkshopEnemy", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2085,7 +2079,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: "{{default}}; \nAnimatorPlay(speaking);\nAnimatorPlay(idle,listener)"
         type: 0
         typeString: CustomFieldType_Text
       - title: zh
@@ -2103,7 +2097,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 7
+        destinationConversationID: 3
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
       conditionsString: CurrentQuestState("Q1KillWorkshopEnemy") == "active"
       userScript: 
       onExecute:
@@ -2111,65 +2111,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 295.63632
+        x: 296.6567
         y: 78.5
-        width: 160
-        height: 30
-    - id: 8
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: "\u8C22\u8C22\uFF01\u6709\u4E9B\u521A\u624D\u53D7\u4F24\u7684\u72AF\u4EBA\u88AB\u9001\u53BB\u4E86\u533B\u52A1\u5BA4\uFF0C\u9EBB\u70E6\u4F60\u53BB\u770B\u770B\u4ED6\u4EEC\u3002"
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: ja
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Q1KilledEnemy"] >= 3
-      userScript: SetQuestState("Q1KillWorkshopEnemy", "success")
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 533.13635
-        y: 76.22726
         width: 160
         height: 30
     - id: 9
@@ -2199,7 +2142,80 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
+        value: '{{default}};
+
+          AnimatorPlay(idle,listener);
+
+          AnimatorPlay(Free
+          Locomotion)'
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: zh
         value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: ja
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 9
+        destinationConversationID: 3
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: CurrentQuestState("Q1KillWorkshopEnemy") == "success"
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 520.12616
+        y: 74.71986
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\u597D\u7684\u3002"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: '{{default}};
+
+          AnimatorPlay(idle,listener);
+
+          AnimatorPlay(Free
+          Locomotion)'
         type: 0
         typeString: CustomFieldType_Text
       - title: zh
@@ -2218,74 +2234,27 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Q1KillWorkshopEnemy") == "success"
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 545.63635
-        y: 11.454552
+        x: 305.84042
+        y: 138.70409
         width: 160
         height: 30
-    entryGroups: []
-    canvasScrollPosition: {x: 31.818176, y: 0}
-    canvasZoom: 0.88000005
-  - id: 4
-    fields:
-    - title: Title
-      value: New Conversation 4
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Actor
-      value: 1
-      type: 5
-      typeString: CustomFieldType_Actor
-    - title: Conversant
-      value: 2
-      type: 5
-      typeString: CustomFieldType_Actor
-    overrideSettings:
-      useOverrides: 0
-      overrideSubtitleSettings: 0
-      showNPCSubtitlesDuringLine: 1
-      showNPCSubtitlesWithResponses: 1
-      showPCSubtitlesDuringLine: 0
-      skipPCSubtitleAfterResponseMenu: 0
-      subtitleCharsPerSecond: 30
-      minSubtitleSeconds: 2
-      continueButton: 0
-      overrideSequenceSettings: 0
-      defaultSequence: 
-      defaultPlayerSequence: 
-      defaultResponseMenuSequence: 
-      overrideInputSettings: 0
-      alwaysForceResponseMenu: 1
-      includeInvalidEntries: 0
-      responseTimeout: 0
-      cancelSubtitle:
-        key: 27
-        buttonName: 
-      cancelConversation:
-        key: 27
-        buttonName: 
-    nodeColor: 
-    dialogueEntries:
-    - id: 0
+    - id: 11
       fields:
       - title: Title
-        value: START
+        value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 1
         type: 5
@@ -2297,15 +2266,20 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: "\u597D\u7684\u3002"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
-        value: None()
+        value: '{{default}};
+
+          AnimatorPlay(idle,listener);
+
+          AnimatorPlay(Free
+          Locomotion)'
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: zh
         value: 
         type: 4
@@ -2314,12 +2288,12 @@ MonoBehaviour:
         value: 
         type: 4
         typeString: CustomFieldType_Localization
-      conversationID: 4
+      conversationID: 3
       isRoot: 0
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
@@ -2329,13 +2303,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 20
+        x: 508.9016
+        y: 142.0668
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.97999996
   syncInfo:
     syncActors: 0
     syncItems: 0
