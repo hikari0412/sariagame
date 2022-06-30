@@ -56,7 +56,7 @@ MonoBehaviour:
   maxStack: 50
   amount: 0
   originalObject: {fileID: 0}
-  dropObject: {fileID: 2770071339292282614, guid: 84c3b9980dab6ec42bf3baf27d242afa,
+  dropObject: {fileID: 3276754078430114180, guid: 2fd4383de8040b74684be194b34cd47e,
     type: 3}
   attributes:
   - name: 0
@@ -965,7 +965,7 @@ MonoBehaviour:
   maxStack: 50
   amount: 0
   originalObject: {fileID: 0}
-  dropObject: {fileID: 2770071339292282614, guid: 84c3b9980dab6ec42bf3baf27d242afa,
+  dropObject: {fileID: 4953598763719009775, guid: 2129fa0da65a9c748b640ccaa6f51dee,
     type: 3}
   attributes:
   - name: 0

@@ -178,7 +178,7 @@ MonoBehaviour:
   showContainerIfEmpty: 1
   questTrackTemplate: {fileID: 11482462}
   showActiveQuests: 1
-  showCompletedQuests: 1
+  showCompletedQuests: 0
   showCompletedEntryText: 0
   questDescriptionSource: 0
   visibleOnStart: 1

@@ -2104,7 +2104,8 @@ MonoBehaviour:
         destinationDialogueID: 10
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Q1KillWorkshopEnemy") == "active"
+      conditionsString: CurrentQuestState("Q1KillWorkshopEnemy") == "active" and
+        (Variable["Q1KilledEnemy"] < 3)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2172,8 +2173,9 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Q1KillWorkshopEnemy") == "success"
-      userScript: 
+      conditionsString: CurrentQuestState("Q1KillWorkshopEnemy") == "active" and
+        (Variable["Q1KilledEnemy"] >= 3)
+      userScript: SetQuestState("Q1KillWorkshopEnemy", "success")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2308,8 +2310,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.97999996
+    canvasScrollPosition: {x: 31.671917, y: 7.594193}
+    canvasZoom: 1.04
   syncInfo:
     syncActors: 0
     syncItems: 0

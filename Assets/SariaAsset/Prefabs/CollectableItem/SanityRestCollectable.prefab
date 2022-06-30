@@ -356,6 +356,10 @@ MonoBehaviour:
   startMatchTarget: 0
   endMatchTarget: 0
   onPressActionDelay: 0
+  preEvent: 0
+  OnPreEvent:
+    m_PersistentCalls:
+      m_Calls: []
   OnPressActionInput:
     m_PersistentCalls:
       m_Calls: []
@@ -856,6 +860,7 @@ GameObject:
   - component: {fileID: 3276754079572099070}
   - component: {fileID: 3276754079572099068}
   - component: {fileID: 3276754079572099069}
+  - component: {fileID: 1276057596585338639}
   m_Layer: 18
   m_Name: mesh_item_sanityrest0
   m_TagString: Untagged
@@ -925,3 +930,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1276057596585338639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3276754079572099071}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.052583907, y: 0.15160413, z: 0.052583907}
+  m_Center: {x: 0, y: 0, z: 0}
