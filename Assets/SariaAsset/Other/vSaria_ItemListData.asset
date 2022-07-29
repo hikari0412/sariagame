@@ -185,6 +185,42 @@ MonoBehaviour:
   onDestroy:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-654931051903642340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5F02\u94C1"
+  m_EditorClassIdentifier: 
+  id: 20
+  description: "\u4F3C\u4E4E\u662F\u6770\u65AF\u987F\u7684\u6E90\u77F3\u9020\u7269\uFF0C\u770B\u8D77\u6765\u6709\u70B9\u50CF\u94A2\u4E1D\u7403\u3002"
+  type: 0
+  icon: {fileID: 21300000, guid: 3f33fd5b96c1ef84b9b4fad8936dcd19, type: 3}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  attributes: []
+  isInEquipArea: 0
+  destroyAfterUse: 0
+  canBeUsed: 0
+  canBeDroped: 0
+  canBeDestroyed: 0
+  EnableAnim: 
+  DisableAnim: 
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +254,7 @@ MonoBehaviour:
   - {fileID: 4698321429561987644}
   - {fileID: -7170896272461401638}
   - {fileID: 47567997057940157}
+  - {fileID: -654931051903642340}
   - {fileID: 114043347838910644}
   inEdition: 0
   itemsHidden: 1
