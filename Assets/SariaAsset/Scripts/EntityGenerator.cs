@@ -12,7 +12,7 @@ public class EntityGenerator : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             prefabCache = GameObject.Instantiate(entityPrefab);
-
+			prefabCache.parent = transform;
         }
     }
     private void OnTriggerExit(Collider other)
