@@ -3165,6 +3165,8 @@ MonoBehaviour:
       m_Bits: 1
   leftWeapon: {fileID: 0}
   rightWeapon: {fileID: 7626270189566109764}
+  currentLeftWeapon: {fileID: 0}
+  currentRightWeapon: {fileID: 0}
   onDamageHit:
     m_PersistentCalls:
       m_Calls: []
@@ -3179,6 +3181,15 @@ MonoBehaviour:
   defaultStaminaRecoveryDelay: 1
   defaultDefenseRate: 50
   defaultDefenseRange: 90
+  skill1CD: 0
+  skill2CD: 0
+  skill3CD: 0
+  skill3Prefab: {fileID: 0}
+  maxEX: 20
+  exModeMesh: {fileID: 0}
+  exModeEnterEffect: {fileID: 0}
+  exModeStayEffect: {fileID: 0}
+  exPoint: 0
 --- !u!114 &7626270187810606414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3311,7 +3322,7 @@ MonoBehaviour:
   maxStrafeSwape: 5
   strafeRotationSpeed: 20
   currentState: 0
-  sphereSensor: {fileID: 0}
+  sphereSensor: {fileID: 7626270189064947476}
   tagsToDetect:
     tags:
     - Player
@@ -3328,7 +3339,7 @@ MonoBehaviour:
   distanceToLostTarget: 10
   chaseStopDistance: 1
   drawAgentPath: 0
-  displayGizmos: 0
+  displayGizmos: 1
   passiveToDamage: 0
   agressiveAtFirstSight: 1
   attackRotationSpeed: 0.5
