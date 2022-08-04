@@ -21,7 +21,7 @@ namespace Invector.vCharacterController
         public GenericInput skill2Input = new GenericInput("Alpha2", "", "");                           // 药物配置输出版
         public GenericInput skill3Input = new GenericInput("Alpha3", "", "");                           // 钙质化
         public GenericInput exModeInput = new GenericInput("Alpha4", "", "");                           // 钙质化
-        public GenericInput blockInput = new GenericInput("Mouse1", "LB", "LB");        
+        public GenericInput blockInput = new GenericInput("Mouse1", "LB", "LB");
 
         internal vMeleeManager meleeManager;
         protected bool _isAttacking;
@@ -40,7 +40,7 @@ namespace Invector.vCharacterController
             if (value)
             {
                 isAttacking = false;
-                isBlocking = false;            
+                isBlocking = false;
             }
         }
 
@@ -72,12 +72,14 @@ namespace Invector.vCharacterController
         }
 
         protected override void FixedUpdate()
-        {            
+        {
             base.FixedUpdate();
         }
 
-        protected override void Update() {
+        protected override void Update()
+        {
             base.Update();
+            if (meleeManager == null) meleeManager = GetComponent<vMeleeManager>();
             meleeManager.blockAttack -= Time.deltaTime;
         }
 
@@ -101,7 +103,7 @@ namespace Invector.vCharacterController
             {
                 ResetAttackTriggers();
                 isBlocking = false;
-            }            
+            }
         }
 
         #region MeleeCombat Input Methods
@@ -110,17 +112,17 @@ namespace Invector.vCharacterController
         /// WEAK ATK INPUT
         /// </summary>
         public virtual void MeleeWeakAttackInput()
-        {            
+        {
             if (cc.animator == null) return;
 
             if (weakAttackInput.GetButtonDown() && MeleeAttackStaminaConditions())
-            {                
+            {
                 TriggerWeakAttack();
             }
         }
 
         public virtual void TriggerWeakAttack()
-        {                
+        {
             cc.animator.SetInteger(vAnimatorParameters.AttackID, AttackID);
             cc.animator.SetTrigger(vAnimatorParameters.WeakAttack);
         }
@@ -167,7 +169,7 @@ namespace Invector.vCharacterController
                 TriggerSkill2();
             }
         }
-        
+
         protected virtual bool Skill3Conditions()
         {
             return !cc.isRolling && !cc.customAction && cc.isGrounded && cc.currentStamina > cc.skill3Stamina && !cc.isJumping && meleeManager.currentSkill3CD <= 0.01f && meleeManager.IsEquipWeapon();
@@ -185,7 +187,7 @@ namespace Invector.vCharacterController
                 TriggerSkill3();
             }
         }
-        
+
         protected virtual bool ExModeConditions()
         {
             return !cc.isRolling && !cc.customAction && cc.isGrounded && meleeManager.exPoint >= meleeManager.maxEX && !cc.isJumping;
@@ -257,7 +259,7 @@ namespace Invector.vCharacterController
         /// </summary>
         public virtual void TriggerSkill3FX()
         {
-            GameObject skill = Instantiate(meleeManager.skill3Prefab,transform.position,transform.rotation);
+            GameObject skill = Instantiate(meleeManager.skill3Prefab, transform.position, transform.rotation);
             skill.GetComponent<ParticleSystem>().Play();
             //ReduceStamina(skill3Stamina, false);
             //currentStaminaRecoveryDelay = 6f;
@@ -270,7 +272,8 @@ namespace Invector.vCharacterController
             if (cc.animator == null) return;
 
             isBlocking = blockInput.GetButton() && cc.currentStamina > 0 && !cc.customAction && !isAttacking;
-            if (blockInput.GetButtonDown() && cc.currentStamina > 0 && !cc.customAction && !isAttacking) {
+            if (blockInput.GetButtonDown() && cc.currentStamina > 0 && !cc.customAction && !isAttacking)
+            {
                 meleeManager.blockAttack = 0.15f;
             }
         }
@@ -287,7 +290,7 @@ namespace Invector.vCharacterController
         }
 
         protected virtual bool MeleeAttackConditions()
-        {           
+        {
             if (meleeManager == null) meleeManager = GetComponent<vMeleeManager>();
             return meleeManager != null && cc.isGrounded && !cc.customAction && !cc.isJumping && !cc.isCrouching && !cc.isRolling && !isEquipping && !cc.animator.IsInTransition(cc.baseLayer);
         }
@@ -299,8 +302,8 @@ namespace Invector.vCharacterController
 
         protected override bool RollConditions()
         {
-            return (!cc.isRolling || cc.canRollAgain) && 
-                cc.input != Vector3.zero && !cc.customAction && cc.isGrounded && cc.currentStamina > cc.rollStamina && 
+            return (!cc.isRolling || cc.canRollAgain) &&
+                cc.input != Vector3.zero && !cc.customAction && cc.isGrounded && cc.currentStamina > cc.rollStamina &&
                 !cc.isJumping && !isAttacking && !cc.animator.IsInTransition(cc.upperBodyLayer) && !cc.animator.IsInTransition(cc.fullbodyLayer);
         }
 
@@ -322,8 +325,8 @@ namespace Invector.vCharacterController
         /// <summary>
         /// Default moveset id used when is without weapon
         /// </summary>
-        public virtual int defaultMoveSetID { get; set; }   
-        
+        public virtual int defaultMoveSetID { get; set; }
+
         /// <summary>
         /// Used to ignore the Weapon moveset id and use the <seealso cref="defaultMoveSetID"/>
         /// </summary>
@@ -337,17 +340,17 @@ namespace Invector.vCharacterController
             get
             {
                 int id = meleeManager.GetMoveSetID();
-                if (id == 0  || overrideWeaponMoveSetID)id = defaultMoveSetID;
+                if (id == 0 || overrideWeaponMoveSetID) id = defaultMoveSetID;
                 return id;
             }
-        } 
-        
+        }
+
         public virtual void ResetMeleeAnimations()
         {
-            if (meleeManager == null || !animator) return; 
-            cc.animator.SetBool(vAnimatorParameters.IsBlocking, false);            
+            if (meleeManager == null || !animator) return;
+            cc.animator.SetBool(vAnimatorParameters.IsBlocking, false);
         }
-        
+
         public virtual int AttackID
         {
             get

@@ -37,7 +37,8 @@ public class UISkillCD : MonoBehaviour
             exModeMask.gameObject.SetActive(true);
             exModeFrame.gameObject.SetActive(false);
         }
-        else {
+        else
+        {
             exModeMask.gameObject.SetActive(false);
         }
 
@@ -46,7 +47,14 @@ public class UISkillCD : MonoBehaviour
             exModeMask.gameObject.SetActive(false);
             exModeFrame.gameObject.SetActive(true);
         }
-        Vector3 tempScale = Vector3.zero;
+        Vector3 tempScale = Vector3.one;
+        if (!meleeManager.IsEquipWeapon())
+        {
+            skillCDUI1.localScale = tempScale;
+            skillCDUI2.localScale = tempScale;
+            skillCDUI3.localScale = tempScale;
+            return;
+        }
         tempScale = skillCDUI1.localScale;
         tempScale.y = meleeManager.currentSkill1CD / meleeManager.skill1CD;
         skillCDUI1.localScale = tempScale;
