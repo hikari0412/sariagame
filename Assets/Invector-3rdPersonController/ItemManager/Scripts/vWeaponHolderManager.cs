@@ -15,7 +15,8 @@ namespace Invector.vItemManager
         internal vItemManager itemManager;
         internal vThirdPersonController cc;
         public Dictionary<string, List<vWeaponHolder>> holderAreas = new Dictionary<string, List<vWeaponHolder>>();
-        protected float equipTime;        
+        protected float equipTime;
+        public UISkillCD CDUI;
 
         void OnDrawGizmosSelected()
         {
@@ -70,6 +71,8 @@ namespace Invector.vItemManager
 
             if (slotsInArea != null && slotsInArea.Count > 0 && holderAreas.ContainsKey(equipArea.equipPointName))
             {
+                if (CDUI)
+                    CDUI.ShowWeaponIcon();
                 // Check All Holders to Display
                 for (int i = 0; i < slotsInArea.Count; i++)
                 {
@@ -114,6 +117,9 @@ namespace Invector.vItemManager
             if (holders.Length == 0 || item == null) return;
             if ((itemManager.inventory != null) && holderAreas.ContainsKey(equipArea.equipPointName))
             {
+
+                if (CDUI)
+                    CDUI.HideWeaponIcon();
                 var holder = holderAreas[equipArea.equipPointName].Find(h => item.id == h.itemID);
                 if (holder)
                 {
@@ -168,6 +174,8 @@ namespace Invector.vItemManager
             if (onStart != null)
                 onStart.Invoke();
 
+            if (CDUI)
+                CDUI.HideWeaponIcon();
             if (!inEquip && !immediate) // ignore time if inEquip or immediate unequip
             {
                 var equipTime = equipDelay;
@@ -194,6 +202,10 @@ namespace Invector.vItemManager
                 yield return null;
             }
             if (onStart != null) onStart.Invoke();
+
+            if (CDUI)
+                CDUI.ShowWeaponIcon();
+
             if (!inUnequip && !immediate) // ignore time if inEquip or immediate unequip
             {
                 var equipTime = equipDelay;

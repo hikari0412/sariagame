@@ -10,6 +10,8 @@ public class UISkillCD : MonoBehaviour
     public GameObject skill2UI;
     public GameObject skill3UI;
     public GameObject exModeUI;
+	
+	bool isHideUi = true;
 
     private RectTransform skillCDUI1;
     private RectTransform skillCDUI2;
@@ -48,7 +50,7 @@ public class UISkillCD : MonoBehaviour
             exModeFrame.gameObject.SetActive(true);
         }
         Vector3 tempScale = Vector3.one;
-        if (!meleeManager.IsEquipWeapon())
+        if (isHideUi)
         {
             skillCDUI1.localScale = tempScale;
             skillCDUI2.localScale = tempScale;
@@ -65,4 +67,14 @@ public class UISkillCD : MonoBehaviour
         tempScale.y = meleeManager.currentSkill3CD / meleeManager.skill3CD;
         skillCDUI3.localScale = tempScale;
     }
+	
+	public void HideWeaponIcon()
+	{
+		isHideUi = true;
+	}
+	
+	public void ShowWeaponIcon()
+	{
+		isHideUi = false;
+	}
 }

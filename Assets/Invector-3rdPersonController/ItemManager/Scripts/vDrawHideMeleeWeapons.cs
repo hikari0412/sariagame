@@ -63,13 +63,13 @@ namespace Invector
 
         protected virtual GameObject RightWeaponObject(bool checkIsActve = false)
         {
-            return melee && melee.meleeManager && melee.meleeManager.rightWeapon &&  
+            return melee && melee.meleeManager && melee.meleeManager.rightWeapon &&
                 (!checkIsActve || melee.meleeManager.rightWeapon.gameObject.activeInHierarchy) ? melee.meleeManager.rightWeapon.gameObject : null;
         }
 
         protected virtual GameObject LeftWeaponObject(bool checkIsActve = false)
         {
-            return melee && melee.meleeManager && melee.meleeManager.leftWeapon && 
+            return melee && melee.meleeManager && melee.meleeManager.leftWeapon &&
                 (!checkIsActve || melee.meleeManager.leftWeapon.gameObject.activeInHierarchy) ? melee.meleeManager.leftWeapon.gameObject : null;
         }
 
@@ -234,7 +234,7 @@ namespace Invector
                 return false;
             else
             {
-                return melee.weakAttackInput.GetButton()&& meleeWeakAttack || melee.skill1Input.GetButton() && meleeStrongAttack|| melee.blockInput.GetButton() && meleeBlock;
+                return melee.weakAttackInput.GetButton() && meleeWeakAttack || melee.skill1Input.GetButton() && meleeStrongAttack || melee.blockInput.GetButton() && meleeBlock;
             }
         }
 

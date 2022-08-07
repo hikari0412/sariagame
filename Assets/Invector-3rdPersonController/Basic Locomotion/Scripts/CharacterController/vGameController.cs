@@ -254,6 +254,26 @@ namespace Invector
                 Destroy(oldPlayer);
             }
         }
+		
+        /// <summary>
+        /// load Scene
+        /// </summary>
+        public virtual void LoadScene(string name)
+        {
+            if (oldPlayer)
+            {
+                DestroyPlayerComponents(oldPlayer);
+            }
+
+            SceneManager.LoadScene(name);
+
+            if (oldPlayer && destroyBodyAfterDead)
+            {
+                Destroy(oldPlayer);
+            }
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
+        }
 
     }
 }
