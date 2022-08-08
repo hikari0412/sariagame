@@ -449,6 +449,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: saria_shield
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 01b04d72a57eabb48bbeacf6878e7ea6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b04d72a57eabb48bbeacf6878e7ea6, type: 3}
 --- !u!1 &3867448006259213916 stripped
@@ -480,6 +485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: eff_Electric
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703559878934557740, guid: e8fc5477932071a41867117557913590,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4953073023061705883, guid: e8fc5477932071a41867117557913590,
         type: 3}
