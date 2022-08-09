@@ -1,5 +1,41 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7399603073209805009
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u66FC\u65AF\u83F2\u5C14\u5FB7\u76D1\u72F1\u5730\u56FE"
+  m_EditorClassIdentifier: 
+  id: 21
+  description: "\u66FC\u65AF\u83F2\u5C14\u5FB7\u76D1\u72F1\u5730\u56FE"
+  type: 0
+  icon: {fileID: 21300000, guid: 19e5787323758ed4a8ce9e55d57c9bf5, type: 3}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  attributes: []
+  isInEquipArea: 0
+  destroyAfterUse: 0
+  canBeUsed: 0
+  canBeDroped: 0
+  canBeDestroyed: 0
+  EnableAnim: 
+  DisableAnim: 
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &-7170896272461401638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,6 +291,7 @@ MonoBehaviour:
   - {fileID: -7170896272461401638}
   - {fileID: 47567997057940157}
   - {fileID: -654931051903642340}
+  - {fileID: -7399603073209805009}
   - {fileID: 114043347838910644}
   inEdition: 0
   itemsHidden: 1
