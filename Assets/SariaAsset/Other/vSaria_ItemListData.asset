@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 21
   description: "\u66FC\u65AF\u83F2\u5C14\u5FB7\u76D1\u72F1\u5730\u56FE"
   type: 0
-  icon: {fileID: 21300000, guid: 19e5787323758ed4a8ce9e55d57c9bf5, type: 3}
+  icon: {fileID: 21300000, guid: 5f14958057b6938499302ddcb287a7bf, type: 3}
   stackable: 0
   maxStack: 1
   amount: 0
