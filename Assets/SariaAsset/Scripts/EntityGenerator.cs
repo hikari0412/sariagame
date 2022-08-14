@@ -5,14 +5,14 @@ using UnityEngine;
 public class EntityGenerator : MonoBehaviour
 {
     public Transform entityPrefab;
-    Transform prefabCache;
+    GameObject prefabCache;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            prefabCache = GameObject.Instantiate(entityPrefab);
-			prefabCache.parent = transform;
+            prefabCache = GameObject.Instantiate(entityPrefab).gameObject;
+			prefabCache.transform.parent = transform;
         }
     }
     private void OnTriggerExit(Collider other)
