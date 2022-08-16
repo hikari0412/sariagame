@@ -61,7 +61,7 @@ MonoBehaviour:
   openCloseWindow: 0
   selectedToolbar: 0
   attackObject: {fileID: 0}
-  damagePercentage: 100
+  damagePercentage: 200
   triggerType: -1
 --- !u!1 &1000010725870802
 GameObject:
@@ -384,7 +384,7 @@ MonoBehaviour:
   openCloseWindow: 0
   selectedToolbar: 0
   attackObject: {fileID: 0}
-  damagePercentage: 100
+  damagePercentage: 200
   triggerType: -1
 --- !u!1001 &7800634019367888974
 PrefabInstance:
