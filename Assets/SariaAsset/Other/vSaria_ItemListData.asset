@@ -96,7 +96,7 @@ MonoBehaviour:
     type: 3}
   attributes:
   - name: 0
-    value: 25
+    value: 60
     isOpen: 1
     isBool: 0
   isInEquipArea: 0
@@ -1043,7 +1043,7 @@ MonoBehaviour:
     type: 3}
   attributes:
   - name: 0
-    value: 80
+    value: 100
     isOpen: 1
     isBool: 0
   isInEquipArea: 0

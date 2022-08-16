@@ -6101,11 +6101,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7626270187810606410, guid: c14fc85ff1b96494697e26ba782ef718,
         type: 3}
-      propertyPath: maxHealth
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626270187810606410, guid: c14fc85ff1b96494697e26ba782ef718,
-        type: 3}
       propertyPath: chanceToRoll
       value: 0.1
       objectReference: {fileID: 0}

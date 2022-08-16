@@ -981,7 +981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 8
+  selectedToolbar: 0
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   maxStrafeSwape: 5
   strafeRotationSpeed: 5
   currentState: 3
-  sphereSensor: {fileID: 0}
+  sphereSensor: {fileID: 1981707729022146743}
   tagsToDetect:
     tags:
     - Player
@@ -1526,7 +1526,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 4.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1981707729022146743
 MonoBehaviour:

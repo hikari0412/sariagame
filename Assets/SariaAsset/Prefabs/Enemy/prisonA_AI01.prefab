@@ -3629,7 +3629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 3
+  selectedToolbar: 0
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
