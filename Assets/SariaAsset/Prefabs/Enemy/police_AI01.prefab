@@ -2504,6 +2504,11 @@ MonoBehaviour:
   skill2CD: 0
   skill3CD: 0
   skill3Prefab: {fileID: 0}
+  maxEX: 20
+  exModeMesh: {fileID: 0}
+  exModeEnterEffect: {fileID: 0}
+  exModeStayEffect: {fileID: 0}
+  exPoint: 0
 --- !u!114 &286235469239769325
 MonoBehaviour:
   m_ObjectHideFlags: 0
