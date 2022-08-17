@@ -427,8 +427,12 @@ MonoBehaviour:
   - id: 15
     name: 
     amount: 1
-    attributes: []
-    changeAttributes: 0
+    attributes:
+    - name: 0
+      value: 60
+      isOpen: 0
+      isBool: 0
+    changeAttributes: 1
     autoEquip: 1
     addToEquipArea: 1
     indexArea: 2
