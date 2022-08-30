@@ -157,11 +157,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_2EE2CB80: 0.1
-    - _1st2nd_Shades_Feather: 0.0001
+    - _1st2nd_Shades_Feather: 0.05
     - _1st_ShadeColor_Feather: 0.05
-    - _1st_ShadeColor_Step: 0.3
-    - _2nd_ShadeColor_Feather: 0.0001
-    - _2nd_ShadeColor_Step: 0
+    - _1st_ShadeColor_Step: 0.4
+    - _2nd_ShadeColor_Feather: 0.05
+    - _2nd_ShadeColor_Step: 0.2
     - _ARSampler_AlphaOn: 0
     - _AR_OffsetU: 0
     - _AR_OffsetV: 0.3
@@ -171,7 +171,7 @@ Material:
     - _Ap_RimLight_FeatherOff: 0
     - _Ap_RimLight_Power: 0.1
     - _AutoRenderQueue: 0
-    - _BaseColor_Step: 0.3
+    - _BaseColor_Step: 0.4
     - _BaseShade_Feather: 0.05
     - _Base_Speed: 0
     - _Blend: 0
@@ -252,7 +252,7 @@ Material:
     - _Scroll_EmissiveU: 0
     - _Scroll_EmissiveV: 0
     - _Set_SystemShadowsToBase: 1
-    - _ShadeColor_Step: 0
+    - _ShadeColor_Step: 0.2
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -291,8 +291,8 @@ Material:
     - Color_23C9B10D: {r: 0.04561229, g: 0.14495295, b: 0.38679245, a: 0}
     - Color_A2AAE5B5: {r: 0.11372546, g: 0.62745106, b: 0.8352941, a: 0}
     - Vector2_C848BFFB: {r: 0.25, g: 0.25, b: 0, a: 0}
-    - _1st_ShadeColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
-    - _2nd_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _1st_ShadeColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
+    - _2nd_ShadeColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
